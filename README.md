@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# portfolio-website
-My custom portfolio website created in ASTRO
-=======
+# Kwame Portfolio Website
+[Kwame-Homepage](https://portfolio-website-three-ruby-56.vercel.app/)
 # Astro Starter Kit: Basics
 
 ```sh
