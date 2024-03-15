@@ -3,9 +3,10 @@
 # Astro Starter Kit: Basics
 
 
-> 🧑‍🚀 **Simple Design Concept before actually coding?**!
+> 🧑‍🚀 **Before diving into coding the website, I create a simple design  to better visualize the end goal.**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+
+![Portfolio website structure](https://github.com/kwame-Owusu/portfolio-website/assets/98961379/62f913fe-3a91-4b2c-97cd-1d190b149f09)
 
 ## 🚀 Project Structure
 
