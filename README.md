@@ -1,36 +1,40 @@
-<<<<<<< HEAD
-# portfolio-website
-My custom portfolio website created in ASTRO
-=======
-# Astro Starter Kit: Basics
+# Kwame Portfolio Website
+[Kwame-Homepage](https://portfolio-website-three-ruby-56.vercel.app/)
 
-```sh
-npm create astro@latest -- --template basics
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Astro](https://astro.build/) - The web framework for content-driven websites.
+- [React.js](https://react.dev/) -Javascript framework, im still not an expert, but there are sprinkles  in this project.
+- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React.
+- [Animate css](https://animate.style/) - Simple Css Library for creating quick and seamless animations.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+
+> 🧑‍🚀 **Before diving into coding the website, I create a simple design  to better visualize the end goal.**
+
+
+![Portfolio website structure](https://github.com/kwame-Owusu/portfolio-website/assets/98961379/62f913fe-3a91-4b2c-97cd-1d190b149f09)
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Basic structure of astro website:
 
 ```text
 /
 ├── public/
+|   └── assets/
+|          └── images
 │   └── favicon.svg
+|   └── K.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── astro files and jsx files
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 │       └── index.astro
+|       └── projects.astro
+|       └── uses.astro              
 └── package.json
 ```
 
@@ -40,7 +44,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## 🧞 Commands to install and build with Astro
 
 All commands are run from the root of the project, from a terminal:
 
@@ -53,7 +57,5 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
->>>>>>> 6713da7 (Initial commit)
+## Here is a link if you want to learn more about Astro?
+[Documentation](https://docs.astro.build) 
