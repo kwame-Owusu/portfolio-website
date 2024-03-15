@@ -44,7 +44,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands to instal and build with Astro
+## 🧞 Commands to install and build with Astro
 
 All commands are run from the root of the project, from a terminal:
 
