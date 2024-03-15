@@ -1,0 +1,41 @@
+.container {
+  /* Container styles */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+hr{
+  color: white;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+span{
+  font-size: 30px;
+}
+
+p{
+  margin-bottom: 30px;
+}
+.btn{
+  text-decoration: none;
+  color: white;
+  background-color: cadetblue;
+  border-radius: 5px;
+  padding: 13px;
+  margin-top: 50px;
+  opacity: 0.6;
+  transition: ease-in-out 0.3s;
+  position: relative;
+  top: 0;
+  
+
+}
+
+.btn:hover{
+  opacity: 1;
+  top: -5px;
+
+}

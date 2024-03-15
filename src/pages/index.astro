@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.jsx';
+import Paragraph from '../components/paragraph.js'
+import { BioSection, BioYear } from '../components/bio.jsx'
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Kwame-Homepage">
+	<Navigation/>
+	<main>
+		<section class="landing-page animate__animated animate__fadeInDown">
+		<div  class="container">
+			<div> <img class="profile-pic"  src="assets/profile-pic.jpg" alt="profile picture"> </div>
+			<div class="name-descriptor-container">
+        <div class="name"><h1>Kwame Owusu</h1> </div>
+        <div class="descriptor"><p>Digital Craftsman</p></div>
+    </div>
+		</div>
+		</section>
+		
+		<section class="who-i-am animate__animated animate__fadeInUp">
+				
+				<div class="about-paragraph">
+					<h1 class="section-underscore">About me</h1>
+					<Paragraph> Hi there!, I'm Kwame, a SWE student in the UK but originally from Ghana, I have a passion for building all sorts of digital things,
+						hence the name "Digital Craftsman", I like coding and creating fun things with code, sometimes even solving some mundane problems.</Paragraph>
+				</div>
+		</section>
+
+
+
+		<section class="Bio  animate__animated animate__fadeInUp" >
+			<h1 class="section-underscore">Bio</h1>
+			<BioSection>
+				<BioYear>2003</BioYear>
+				Born in Kumasi , Ghana.
+			</BioSection>
+			<BioSection>
+				<BioYear>2022</BioYear>
+				I started coding and wrote my first "hello world" in Python.
+			</BioSection>
+			<BioSection>
+				<BioYear>2023 to present</BioYear>
+				I've been studying Software Engineering at university.
+			</BioSection>
+		</section>
+
+		
+		<section class="what-i-like  animate__animated animate__fadeInUp">
+		
+			<div class="underscore-animation">
+			<h1 class="section-underscore">I 🤍</h1>
+			<Paragraph>I have a passion for reading japanese literature and manga. My favourite Book is <a href="https://www.goodreads.com/book/show/194746.No_Longer_Human"  target="_blank"><i>'No Longer Human' by Osamu Dazai</i></a>, and 
+				<a href="https://myanimelist.net/manga/656/Vagabond" target="_blank"><i>'Vagabond' by Takehiko Inoue</i></a> stands out as my favourite manga. I also enjoy playing FPS games and excel at them.
+			</Paragraph>
+		</div>
+		</section>
+	
+
+	
+
+		<section class="social-links">
+			<div class="social-container" >
+				<a href="https://github.com/kwame-Owusu" target="_blank">
+					<svg class="social-arrow"  xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
+						<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
+					</svg>
+						GitHub
+						
+				</a>
+				<span>/</span>
+				<a href="https://www.linkedin.com/in/alfredow23/" target="_blank">
+					<svg  class="social-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
+						<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
+					
+					</svg>
+						LinkedIn
+						
+				</a>
+				<span>/</span>
+				<a href="https://www.instagram.com/kwm.ows/" target="_blank">
+					<svg class="social-arrow"  xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
+						<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
+					
+					</svg>
+						Instagram
+						
+				</a>
+		</div>
+		
+		</div>
+		</section>
+		<Footer/>
+		
+	</main>
+
+</Layout>
+
+
+<style>
+
+	main {
+		margin: auto;
+		width: 900px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+
+	@media (max-width:476px){
+		main{
+			font-size: 15px;
+		}
+	}
+
+	
+	
+	.profile-pic{
+		display: inline-block;
+		max-width: 150px;
+		border-radius: 150px;
+	}
+	
+
+	.container {
+        display: flex;
+        align-items: center; /* Align items vertically */
+    }
+
+    .name-descriptor-container {
+        margin-left: 30px; /* Adjust margin as needed */
+    }
+
+    .name h1 {
+        margin: 0; /* Remove default margin of h1 */
+        margin-bottom: 5px; /* Adjust margin between name and descriptor */
+    }
+
+    .descriptor p {
+        margin: 0; /* Remove default margin of p */
+    }
+
+		.landing-page{
+			margin-top: 90px;
+			margin-bottom: 50px;
+		}
+
+		.landing-page {
+    padding: 20px; /* Adjust as needed */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px; /* Adjust image size as needed */
+    height: auto;
+    margin-right: 20px; /* Adjust spacing between image and text as needed */
+}
+
+.name-descriptor-container {
+    flex-grow: 1;
+}
+
+.name, .descriptor {
+    margin: 0; /* Reset margin to avoid extra spacing */
+}
+
+/* Ensure responsive behavior for smaller screens */
+@media screen and (max-width: 400px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+
+    .profile-pic {
+        margin: 0; /* Remove margin for profile picture */
+    }
+
+    .name-descriptor-container {
+        margin-top: 10px; /* Add margin between profile picture and text */
+    }
+}
+
+		.section-underscore {
+		display: inline; /* Ensures that the border only covers the width of the text */
+    border-bottom: 4px solid #6196A6; /* Adjust thickness and color as needed */
+    
+	 }
+		/* You can adjust the margin or padding values according to your preference */
+	.about-paragraph .section-underscore {
+    margin-bottom: 10px; /* Adds margin below the h1 */
+	}
+
+	.about-paragraph .paragraph {
+    margin-top: 10px; /* Adds margin above the paragraph */
+	}
+
+
+		.Bio{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+
+.underscore-animation a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Added background-color transition */
+    padding: 2px 4px; /* Add padding for a subtle background effect */
+		border-radius: 10px;
+}
+
+.underscore-animation a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto; /* Adjusted width */
+    height: 1.5px;
+    background-color: #6196A6; /* Color of the line */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+}
+
+.underscore-animation a:hover::before {
+    transform: scaleX(1); /* Fully visible on hover */
+}
+
+.underscore-animation a:hover {
+    color: #86c0d2; /* Change color on hover */
+    background-color: white; /* White background on hover */
+}
+
+
+
+
+.social-arrow {
+    transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
+
+.social-arrow:hover {
+    transform: translateY(-5px); /* Move the SVG element 5 pixels upward on hover */
+}
+
+	.social-container{
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		font-size: smaller;
+
+
+	}
+	.social-container a {
+    color: white;
+    text-decoration: none;
+    position: relative; /* Required for positioning the pseudo-element */
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in;
+}
+
+.social-container a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust as needed for positioning */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust as needed for thickness */
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.social-container a:hover {
+    opacity: 1;
+}
+
+.social-container a:hover::after {
+    background-color: white; /* White underline on hover */
+}
+
+
+	.social-links{
+		margin-top: 100px;
+		font-size: larger;
+		
+	}
+	
+	
+	.social-links {
+    padding: 20px; /* Adjust as needed */
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.social-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Adjust for lower resolutions */
+@media screen and (max-width: 389px) {
+    .social-container {
+        flex-direction: column;
+    }
+
+    .social-container a {
+        margin-bottom: 0.5rem; /* Add spacing between links */
+    }
+
+    .social-arrow {
+        margin-right: 0; /* Remove margin for arrows */
+    }
+
+    span {
+        display: none; /* Hide '/' on lower resolutions */
+    }
+}
+
+
+</style>

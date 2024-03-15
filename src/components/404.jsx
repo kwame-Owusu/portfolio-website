@@ -1,0 +1,17 @@
+import { styled } from "@chakra-ui/react";
+import '../styles/NotFound.css'; // Import your custom CSS if needed
+
+const NotFound = () => {
+  return (
+    <div className="container animate__animated animate__fadeInDown">
+      <div>
+        <h1>Not Found</h1>
+        <hr />
+        <p>The page you are looking for was not found, I'm probably working on it <span>👨🏿‍💻</span></p>
+      </div>
+      <div> <a href="/" className="btn">Return to home</a> </div>
+    </div>
+  );
+}
+
+export default NotFound;
