@@ -9,7 +9,7 @@ const NotFound = () => {
         <hr />
         <p>The page you are looking for was not found, I'm probably working on it <span>👨🏿‍💻</span></p>
       </div>
-      <div> <a href="/" className="btn">Return to home</a> </div>
+      <div><a href="/" className="btn">Return to Home</a></div>
     </div>
   );
 }

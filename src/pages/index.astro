@@ -4,6 +4,7 @@ import Footer from '../components/Footer.jsx';
 import Paragraph from '../components/paragraph.js'
 import { BioSection, BioYear } from '../components/bio.jsx'
 import Navigation from '../components/Navigation.astro';
+import Socials from '../components/socials.jsx'
 ---
 
 <Layout title="Kwame-Homepage">
@@ -56,41 +57,7 @@ import Navigation from '../components/Navigation.astro';
 			</Paragraph>
 		</div>
 		</section>
-	
-
-	
-
-		<section class="social-links">
-			<div class="social-container" >
-				<a href="https://github.com/kwame-Owusu" target="_blank">
-					<svg class="social-arrow"  xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
-						<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
-					</svg>
-						GitHub
-						
-				</a>
-				<span>/</span>
-				<a href="https://www.linkedin.com/in/alfredow23/" target="_blank">
-					<svg  class="social-arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
-						<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
-					
-					</svg>
-						LinkedIn
-						
-				</a>
-				<span>/</span>
-				<a href="https://www.instagram.com/kwm.ows/" target="_blank">
-					<svg class="social-arrow"  xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
-						<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
-					
-					</svg>
-						Instagram
-						
-				</a>
-		</div>
-		
-		</div>
-		</section>
+		<Socials />
 		<Footer/>
 		
 	</main>
@@ -236,99 +203,4 @@ import Navigation from '../components/Navigation.astro';
     color: #86c0d2; /* Change color on hover */
     background-color: white; /* White background on hover */
 }
-
-
-
-
-.social-arrow {
-    transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
-}
-
-.social-arrow:hover {
-    transform: translateY(-5px); /* Move the SVG element 5 pixels upward on hover */
-}
-
-	.social-container{
-		display: flex;
-		flex-direction: row;
-		gap: 10px;
-		font-size: smaller;
-
-
-	}
-	.social-container a {
-    color: white;
-    text-decoration: none;
-    position: relative; /* Required for positioning the pseudo-element */
-    opacity: 0.6;
-    transition: opacity 0.2s ease-in;
-}
-
-.social-container a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust as needed for positioning */
-    left: 0;
-    width: 100%;
-    height: 2px; /* Adjust as needed for thickness */
-    background-color: transparent; /* Initially transparent */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition */
-}
-
-.social-container a:hover {
-    opacity: 1;
-}
-
-.social-container a:hover::after {
-    background-color: white; /* White underline on hover */
-}
-
-
-	.social-links{
-		margin-top: 100px;
-		font-size: larger;
-		
-	}
-	
-	
-	.social-links {
-    padding: 20px; /* Adjust as needed */
-}
-
-.social-container {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-}
-
-.social-container a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-
-
-
-/* Adjust for lower resolutions */
-@media screen and (max-width: 389px) {
-    .social-container {
-        flex-direction: column;
-    }
-
-    .social-container a {
-        margin-bottom: 0.5rem; /* Add spacing between links */
-    }
-
-    .social-arrow {
-        margin-right: 0; /* Remove margin for arrows */
-    }
-
-    span {
-        display: none; /* Hide '/' on lower resolutions */
-    }
-}
-
-
 </style>
