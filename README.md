@@ -57,3 +57,14 @@ npm run dev
 ```
 ## Here is a link if you want to learn more about Astro?
 [Documentation](https://docs.astro.build) 
+
+## License
+
+MIT License.
+
+You can create your own homepage for free without notifying me by forking this project under the following conditions:
+
+- Add a link to [my homepage](https://www.craftz.dog/)
+
+
+---
