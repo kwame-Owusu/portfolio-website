@@ -11,7 +11,7 @@ As someone who enjoys both coding and palying video games, having a reliable mou
 At my desk, I rely on the [Lamzu Maya](https://lamzu.com/products/lamzu-maya-4k) as my daily driver.
 it's one of the finest mice I've ever used.With its featherweight design of just 45g, it offers exceptional precision, making it a breeze to aim in FPS games.
 <img src="/posts/maya_3.jpg" width="760" height="360">
-Additionally it provides a comfortable browsing experience, and comes in handy when i need to copy and paste lines of code during programming sessions.
+Additionally it provides a comfortable browsing experience, and comes in handy when I need to copy and paste lines of code during programming sessions.
 
 
 
