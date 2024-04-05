@@ -1,12 +1,137 @@
 --- 
 import Navigation from '../components/Navigation.astro'
-import Layout from '../layouts/Layout.astro';
+import UsesLayout from '../layouts/UsesLayout.astro';
+import Device from '../components/Device.astro'
 import Footer from '../components/Footer.jsx';
-import NotFound from '../components/404.jsx'
----
-<Layout title='Uses-Page'>
 
-  <NotFound/>
+---
+<UsesLayout title='Uses-Page'>
+  <Navigation />
+  <main>
+    <section class="hero">
+      <h1>Welcome to a curated list of tech I use</h1>
+    </section>
+
+    <section class="hero-description">
+      <p>
+        As someone immersed in both development and gaming, I find myself spending countless hours at my desk each day. In response, I've made it a priority to enhance my workspace continually, aiming to maximize my productivity. 
+        Since I began earning money, I've been investing in better technology that aligns with my goals in development and gaming.
+        Take a peek at the tech I rely on daily.
+      </p>
+      <hr class="hero-separator">
+    
+
+    </section>
+
+    <section class="device-items">
+      <div class="container">
+        <div>
+            <Device 
+              name='MateBook 16s(2023)'
+              device='Laptop'
+              href='/posts/post-1''
+              image='posts/matebook_1.jpg'
+            />
+        </div>
+          
+        <div>
+            <Device 
+              name='Nikon D3300'
+              device='Camera'
+              href='/posts/post-2'
+              image='posts/camera_2.jpg'
+            />
+        </div>
+         <div>
+          <Device 
+            name='Lamzu Maya'
+            device='Mouse'
+            href='/posts/post-3'
+            image='posts/maya_1.jpg'
+          />
+      
+      </div>
+      <!--       
+      <div>
+        <Device 
+          name='computer'
+          device='mobile-phone'
+          href='https://kwame.vercel.app'
+          image='assets/piece_img.jpg'
+        /> -->
+    </div> 
+      </div>
+
+        
+    
+ 
+    
+    </section>
+ 
+  </main>
+
   <Footer />
-</Layout>
+</UsesLayout>
+
+<style>
+	main {
+    font-size: 15px;
+		margin: 0;
+    padding: 0;
+		color: white;
+		line-height: 1.6;
+	}
+  .hero {
+  background-image: url('/assets/uses-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  height: 50vh;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.hero-description{
+  overflow-wrap: break-word;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: auto;
+	width: 900px;
+	max-width: calc(100% - 2rem);
+  margin-top: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.hero-description p{
+ text-indent: 1rem;
+}
+.hero-separator{
+  color: white;
+  margin-top: 15px;
+}
+.device-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+
+@media (max-width: 770px){
+  .container{
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+}
+
+
+
+
+</style>
 

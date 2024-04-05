@@ -1,0 +1,154 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Content from '../components/Content.astro';
+import Footer from '../components/Footer';
+
+export interface Props {
+	content: {
+		title: string;
+		Hero?: string;
+		description: string;
+		
+		
+	}
+
+}
+
+const {
+	content : {title, Hero, description, } 
+} =  Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/icon-2.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+
+	</head>
+	<Navigation />
+	<body>
+		
+	
+	<main>
+
+		<Content className='content'>
+			<div class="hero-container">
+				{ Hero && ( <img src={Hero}, alt="device-image" width="760" height="360" class="hero-img" decoding="async"  />)}
+			</div>
+			<h1 class="hero-title">{title}</h1>
+			<div>{description}</div>
+			<hr>
+			<slot class="main-body" />
+			<span></span>
+
+
+		</Content>
+
+	</main>
+	<Footer/>
+</body>
+
+</html>
+
+
+<style is:global>
+
+	:root {
+		--font-headers: 'Roboto mono', monospace;
+		--font-paragraphs: 'Roboto Mono', monospace;
+	
+
+	}
+
+	* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+	html {
+    color: white;
+		font-family: var(--font-paragraphs);
+		 background: #191921; 
+		
+	}
+	.main-body{
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	main{
+		margin: auto;
+		padding-top: 56px;
+		width: 900px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		line-height: 1.6;
+	}
+	h1{
+		font-family: var(--font-headers)
+	}
+
+	body{
+		margin: 0;
+		overflow-wrap: break-word;
+	}
+
+	.content{
+		padding-top: 1.5rem
+	}
+	.hero-container{
+		margin-bottom: 2rem;
+	}
+	.hero-img{
+		border: 1px solid rgba(203,213,225, 0.5);
+  	border-radius: 0.5rem;
+		height: 500px;
+		width: 720px;
+		object-fit:cover;
+	}
+	.hero-title{
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem;
+	}
+
+	hr{
+		margin-top: 1rem;
+		margin-bottom: 1.75rem;
+		border-color: rgba(203,213,225, 0.5);
+	}
+	a{
+		font-style: italic;
+	}
+
+	a{
+		text-decoration: none;
+  	color: white;
+  	position: relative;
+	}
+	a::after{
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: transparent;
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	a:hover::after {
+  background-color: white;
+}
+
+
+</style>
