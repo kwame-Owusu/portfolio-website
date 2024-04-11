@@ -25,4 +25,13 @@ img{
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 773px) {
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
 </style>

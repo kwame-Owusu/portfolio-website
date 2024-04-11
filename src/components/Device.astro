@@ -12,7 +12,9 @@ const { href, name, device, image} = Astro.props;
 ---
 
 <div class="devices">
+  <div class="image-container">
   <div class="device-img"><a href={href}> <img src={image} decoding="async" alt="device image"> </a></div>
+  </div>
   <div class="device-name"><p>{name}</p></div>
   <div class="device-type"><p>{device}</p></div>
 
@@ -41,10 +43,18 @@ const { href, name, device, image} = Astro.props;
   .device-type{
     opacity: 0.7
   }
-
+ 
   
 @media (max-width: 768px) {
-
+  img{
+    width: 100%;
+    height: auto;
+    
+  }
+  .image-container{
+    margin: 10px;
+  }
 }
+
 
 </style>
