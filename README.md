@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Kwame Portfolio Website
 [Kwame-Homepage](https://portfolio-website-three-ruby-56.vercel.app/)
 
@@ -68,3 +69,7 @@ You can create your own homepage for free without notifying me by forking this p
 
 
 ---
+=======
+# portfolio-website
+Personal website created with Astro
+>>>>>>> ec18aa839926a0eb87bf28cef671233a765d09bc
