@@ -1,5 +1,5 @@
 # Kwame Portfolio Website
-[Kwame-Homepage](https://portfolio-website-three-ruby-56.vercel.app/)
+[Kwame-Homepage](https://www.kwameowusu.dev/)
 
 
 ## Stack
@@ -64,6 +64,13 @@ MIT License.
 
 You can create your own homepage for free without notifying me by forking this project under the following conditions:
 
-- Add a link to [my homepage]
+- Add a link to [Homepage](https://www.kwameowusu.dev/)
+Example: 
+```javascript
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+    <p>This site was designed by <a href="https://www.kwameowusu.dev/ target="_blank">Example</a>.</p>
+</footer>
 
+```
 
