@@ -1,0 +1,66 @@
+---
+interface Props {
+	title: string;
+  description: string;
+	date: string;
+	href: string;
+}
+
+const { href, title, date, description} = Astro.props;
+
+---
+
+
+<div class="outer">
+<a href={href} class="container">
+
+  <div class="title"><h1>{title}</h1></div>
+  <div class="description"><p>{description}</p></div>
+  <div class="date">{date}</div>
+
+
+
+</a>
+</div>
+
+
+<style>
+  .outer{
+      border: 1.5px solid white;
+      opacity: 0.5;
+      border-radius: 15px;
+      padding: 8px;
+      transition: transform 0.2s ease;
+  }
+  .outer:hover{
+    transform: translateY(-1px);
+    opacity: 1; 
+  }
+
+  @media (max-width: 580px) {
+    .outer{
+      margin: 1rem;
+    }
+    
+  }
+  .title{
+    margin-bottom: 10px;
+  }
+
+.container{
+  padding: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  line-height: 1.5rem;
+  text-align: left;
+}
+a.container{
+  text-decoration: none;
+  color: inherit;
+}
+
+.description, .date{
+  opacity: 0.7;
+}
+
+</style>
