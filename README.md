@@ -5,7 +5,7 @@
 ## Stack
 
 - [Astro](https://astro.build/) - The web framework for content-driven websites.
-- [React.js](https://react.dev/) -Javascript framework, im still not an expert, but there are sprinkles  in this project.
+- [JSX](https://react.dev/) -Javascript framework, im still not an expert, but there are sprinkles of it in this project.
 - [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React.
 - [Animate css](https://animate.style/) - Simple Css Library for creating quick and seamless animations.
 
