@@ -11,10 +11,11 @@
 - [MDX](https://mdxjs.com/) - Markdown for the component era, used in my blog section and posts.
 
 
-> 🧑‍🚀 **Before diving into coding the website, I create a simple design  to better visualize the end goal.**
+> 🧑‍🚀 **Before diving into coding the website, I created a simple design in [Excalidraw](https://excalidraw.com/) to better visualize the end goal.**
+![Portfolio website structure](https://github.com/kwame-Owusu/portfolio-website/assets/98961379/f3d8db58-6cb1-4887-a69a-208c14ddf073)
 
 
-![Portfolio website structure](https://github.com/kwame-Owusu/portfolio-website/assets/98961379/62f913fe-3a91-4b2c-97cd-1d190b149f09)
+
 > 🧑‍🚀 **What I am working on right now :**
 I will try and implement the Project page as soon as possible, trying to balance everything with my uni work 🫡.
 and the uses page will be next, after that everything I will implement will  be optional, but will at least try to incorporate a blog inside the website
