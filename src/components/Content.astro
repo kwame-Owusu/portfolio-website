@@ -1,13 +1,9 @@
 ---
-export interface Props {
-  className?: string
-}
-
-const { className = '' } = Astro.props
 ---
 
-<article class={`${className}`}><slot /></article>
-
+<div>
+  <article> <slot/> </article>
+</div>
 
 <style>
 article{
@@ -15,7 +11,7 @@ article{
   padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 48rem;
+  max-width: 50rem;
 }
 
 

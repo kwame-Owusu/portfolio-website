@@ -1,17 +1,77 @@
 ---
-Hero: '/assets/uses-hero.jpg'
-layout: ../../layouts/BlogPost.astro
-title: "Creation of my Astro personal website"
-description: "How to use Astro"
-publishedAt: "2021-05-26"
-status: "published"
+Hero: "/blog/astro.jpg"
+layout: ../../layouts/NewLayout.astro
+title: "Why use the Astro Framework"
+description: "Why use Astro to build static websites"
+
 ---
 
-```tsx
+
+
+
+My recent interest in [Astro](https://astro.build/) started when I was looking into what I want to eventually do after University,
+and the path that I have chosen is that of going for Full-Stack Development. And as someone who is lazy as I am, I do not want to write plain HTML, CSS and Javascript although
+I still think strong foundations in these languages is required.
+
+Astro caught my eye because of [primeagen](https://www.youtube.com/watch?v=Sqp5VSqbQOY) (a SWE content creator) and  as an avid follower of him, I believed the hype train, and started
+messing around with the default scaffolding when you create a new project, then from there I started reading the extensive documentation. 
+
+The main  feature that makes Astro stand out from other static site generators and frameworks is the "Island" feature, which enables the user to have sections in their 
+website or webapp that are dynamic and other that are static, this makes rendering content blazingly fast!, because we have the ability to load the static parts of our site
+without needing to wait for the dynamic portions of our site. 
+
+For example:
+```astro
+
+---
+import MyReactComponent from "../components/MyReactComponent"
+---
+<div> <MyReactComponent /> </div>
+```
+Whatever we have programmed for the react component to do will not come to fruition, unless we add client:load
+
+```astro
+---
+import MyReactComponent from "../components/MyReactComponent"
+---
+<div> <MyReactComponent client:load /> </div>
+```
+when I was first trying Astro out this blew my mind, because now this framework  opens the door for so many more innovative ideas on how to build website and webapps
+because with islands, client-side JavaScript is only loaded for the explicit interactive components that you mark using client:* directives.
+
+One more thing that made me fell in love with Astro is how easy it is for even beginners to learn how to create website with components, I went into Astro now knowing a lot
+about component-based website, but now I would say I am getting better by the day, for showcasing purposes this is how my compoents for my blog section was created:
+
+```astro
+---
 interface Props {
 	title: string;
+  description: string;
+	date: string;
+	href: string;
 }
 
-const { title } = Astro.props;
-title = 'will be populating soon'
+const { href, title, date,} = Astro.props;
+
+---
+
+
+<div class="outer">
+  <a href={href} class="container">
+    <div class="post-content">
+      <div class="title"><h1>{title}</h1></div>
+      <div class="date">{date}</div>
+    </div>
+  </a>
+</div>
 ```
+this way of looking at website as a bunch of components that can interact with each other seamlessly is quite 
+fascinating to me and I wish for more people to start learning this framework after getting accustomed to HTML and CSS, because I
+do not even think one needs extensive knowledge on Javascript or any other framework of that matter to start learning Astro,
+now go on and try it for [yourself](https://astro.build/) and happy coding🧑🏿‍💻.
+
+
+
+
+
+

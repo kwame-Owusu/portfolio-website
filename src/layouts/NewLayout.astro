@@ -1,0 +1,85 @@
+---
+import Navigation from '../components/Navigation.astro';
+import "../styles/NewLayout.css"
+import Footer from '../components/Footer';
+import BaseHead from '../components/BaseHead.astro';
+
+
+
+const {frontmatter} = Astro.props;
+const {title, Hero, description} = frontmatter;
+
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			html{
+				background-color: #191921;
+				color: white;
+			}
+			hr{
+			 border: 1px solid rgba(255, 255, 255, 0.7)
+			 
+			}
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+			}
+			.hero-image {
+				width: 100%;
+				margin-top: 30px;
+			}
+			
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border: 1px solid rgba(203,213,225, 0.5);
+  			border-radius: 0.5rem;
+			}
+			
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: left;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+			}
+
+
+
+
+			
+		</style>
+	</head>
+
+	<body>
+	<Navigation/>
+		<main>
+			<article>
+				<div class="hero-image">
+					{Hero && <img width={1020} height={510} src={Hero} alt="hero-img" />}
+				</div>
+				<div class="prose">
+					<div class="title">
+						<h1>{title}</h1>
+						<hr />
+					</div>
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

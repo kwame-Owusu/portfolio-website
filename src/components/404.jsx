@@ -1,5 +1,4 @@
-import { styled } from "@chakra-ui/react";
-import '../styles/NotFound.css'; // Import your custom CSS if needed
+import '../styles/NotFound.css';
 
 const NotFound = () => {
   return (

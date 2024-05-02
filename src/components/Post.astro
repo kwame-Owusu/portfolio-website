@@ -6,31 +6,26 @@ interface Props {
 	href: string;
 }
 
-const { href, title, date, description} = Astro.props;
+const { href, title, date,} = Astro.props;
 
 ---
 
 
 <div class="outer">
-<a href={href} class="container">
-
-  <div class="title"><h1>{title}</h1></div>
-  <div class="description"><p>{description}</p></div>
-  <div class="date">{date}</div>
-
-
-
-</a>
+  <a href={href} class="container">
+    <div class="post-content">
+      <div class="title"><h1>{title}</h1></div>
+      <div class="date">{date}</div>
+    </div>
+  </a>
 </div>
 
 
 <style>
   .outer{
-      border: 1.5px solid white;
       opacity: 0.5;
-      border-radius: 15px;
       padding: 8px;
-      transition: transform 0.2s ease;
+      transition: transform 0.1s ease;
   }
   .outer:hover{
     transform: translateY(-1px);
@@ -48,11 +43,8 @@ const { href, title, date, description} = Astro.props;
   }
 
 .container{
-  padding: 10px;
-  border-radius: 5px;
-  padding: 20px;
   line-height: 1.5rem;
-  text-align: left;
+  text-align: left; 
 }
 a.container{
   text-decoration: none;
@@ -61,6 +53,18 @@ a.container{
 
 .description, .date{
   opacity: 0.7;
+}
+
+.container {
+  display: inline-block; /* Ensures the container wraps around its content */
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.post-content {
+  line-height: 1.5rem;
+  text-align: left;
 }
 
 </style>

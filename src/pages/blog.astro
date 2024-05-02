@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation.astro';
 import UsesLayout from '../layouts/UsesLayout.astro';
 import Footer from '../components/Footer.jsx';
 
+
 ---
 <UsesLayout title='Blog-page'>
   <Navigation />
@@ -20,17 +21,10 @@ import Footer from '../components/Footer.jsx';
       </p>
       <hr class="hero-separator">
     </section>
-
     <section class="blog-items">
       <div class="container">
-        <Post 
-        title='Creation of my personal website with Astro'
-        description='How did I come about creating my website with Astro....'
-        date='April 4th, 2024'
-        href='/posts/blog-1'
-
+      <Post title='Why Use Astro Framework', description='', date='2024', href='/posts/blog-1'/>
         
-        />
       </div>
 
     </section>
@@ -71,7 +65,7 @@ import Footer from '../components/Footer.jsx';
   align-items: center; 
 }
 
-.hero-description{
+.hero-description, .blog-items{
   overflow-wrap: break-word;
   margin: auto;
 	width: 900px;
@@ -86,26 +80,17 @@ import Footer from '../components/Footer.jsx';
 }
 
 
-.blog-items{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1.75rem;
-}
 .container {
-  text-align: center;
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 
-@media (max-width: 770px){
+@media (max-width: 550px){
   .container{
     grid-template-columns: repeat(1, minmax(0, 1fr))
   }
   
 }
-
 
 </style>
