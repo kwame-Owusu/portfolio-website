@@ -66,8 +66,29 @@ const { href, title, date,} = Astro.props;
 </div>
 ```
 this way of looking at website as a bunch of components that can interact with each other seamlessly is quite 
-fascinating to me and I wish for more people to start learning this framework after getting accustomed to HTML and CSS, because I
-do not even think one needs extensive knowledge on Javascript or any other framework of that matter to start learning Astro and there is many more
+fascinating to me and I wish for more people to start learning this framework after getting accustomed to HTML and CSS.
+
+Another important feature of Astro is the flexibility it gives when deploying from sites like [vercel](https://vercel.com/) or [netlify](https://www.netlify.com/),
+because you can specify in your astro.config.mjs how you want the output of your website or webapp to be
+
+```astro
+---
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import mdx from "@astrojs/mdx";
+import vercel from "@astrojs/vercel/serverless";
+---
+// https://astro.build/config
+export default defineConfig({
+  integrations: [react(), mdx()],
+  output: "server",
+  adapter: vercel(),
+});
+```
+in my case I am hosting from vercel so this is the configuration needed for that, you can choose outputs from "static" for pur static website,
+"hybrid" for middle of the way between dynamic and static and "server".
+
+I do not even think one needs extensive knowledge on Javascript or any other framework of that matter to start learning Astro and there is many more
 features about Astro that can be found in the Documentation that I highly recommend you read,
 now go on and try it for [yourself](https://astro.build/) and happy coding🧑🏿‍💻.
 
