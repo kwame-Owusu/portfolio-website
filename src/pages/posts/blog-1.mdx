@@ -17,8 +17,8 @@ Astro caught my eye because of [primeagen](https://www.youtube.com/watch?v=Sqp5V
 messing around with the default scaffolding when you create a new project, then from there I started reading the extensive documentation. 
 
 The main  feature that makes Astro stand out from other static site generators and frameworks is the "Island" feature, which enables the user to have sections in their 
-website or webapp that are dynamic and other that are static, this makes rendering content blazingly fast!, because we have the ability to load the static parts of our site
-without needing to wait for the dynamic portions of our site. 
+website or webapp that are dynamic and others that are static, this makes rendering content fast and efficient, because we have the ability to load the static parts of our site
+without the need to wait for the dynamic portions of our site. 
 
 For example:
 ```astro
@@ -39,8 +39,8 @@ import MyReactComponent from "../components/MyReactComponent"
 when I was first trying Astro out this blew my mind, because now this framework  opens the door for so many more innovative ideas on how to build website and webapps
 because with islands, client-side JavaScript is only loaded for the explicit interactive components that you mark using client:* directives.
 
-One more thing that made me fell in love with Astro is how easy it is for even beginners to learn how to create website with components, I went into Astro now knowing a lot
-about component-based website, but now I would say I am getting better by the day, for showcasing purposes this is how my compoents for my blog section was created:
+One more thing that made me fell in love with Astro is how easy it is for even beginners to learn how to create website with components, I went into Astro not knowing a lot
+about component-based front-end design, but now I would say I am getting better by the day, for showcasing purposes this is how my component for the blog section was created:
 
 ```astro
 ---
@@ -86,11 +86,13 @@ export default defineConfig({
 });
 ```
 in my case I am hosting from vercel so this is the configuration needed for that, you can choose outputs from "static" for pure static website with no dynamic content,
-"hybrid" for middle of the way between dynamic and static and "server".
+"hybrid" for middle of the way between dynamic and static, and in my case using "sever" to deploy using vercel.
 
-I do not even think one needs extensive knowledge on Javascript or any other framework of that matter to start learning Astro and there is many more
-features about Astro that can be found in the Documentation that I highly recommend you read,
-now go on and try it for [yourself](https://astro.build/) and happy coding🧑🏿‍💻.
+
+You don't need a deep understanding of JavaScript or any other framework to begin learning Astro. Its beginner-friendly nature makes it accessible to newcomers, 
+The documentation is packed with valuable information, so I highly recommend giving it a thorough read. Take the leap and explore [Astro](https://astro.build/)
+for yourself—it's a fantastic tool for web development. Happy coding! 🚀
+
 
 
 
