@@ -16,11 +16,6 @@
 
 
 
-> 🧑‍🚀 **What I am working on right now :**
-I will try and implement the Project page as soon as possible, trying to balance everything with my uni work 🫡.
-and the uses page will be next, after that everything I will implement will  be optional, but will at least try to incorporate a blog inside the website
- to share what I like to do on a daily basis, write about some technologies I am excited about and on my gaming adventures, last but not least about my Faith.
-
 ## 🚀 Project Structure
 
 Basic structure of astro website:
