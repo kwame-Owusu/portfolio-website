@@ -1,0 +1,69 @@
+---
+Hero: "/blog/minimal_vscode.png"
+layout: ../../layouts/NewLayout.astro
+title: "VS Code Configuration"
+description: "My current Configuration in VS Code"
+
+---
+
+
+# Reason
+Its Been about 3 months since I've converted to a "minimal" setup when coding, I always hated the how bloated the VS Code UI looked.
+
+So I made changes to it, by removing most of the UI elements, such as the Sidebar,Menu Bar and Activity bar, and I have come to love the look of VS Code now,
+apart from the look, I have also been using Vim motions, which are the primary key-bindings you use when using Vim as a text editor. 
+
+At first it can be quite daunting, because it forces you not to use your mouse when coding which I think it is a good thing, because you are able to jump through files
+much quicker and jumping in-and-out of the terminal quite enjoyable. I use [VimHero](https://www.vim-hero.com/) to get a quick grasp of the Vim motions, and I would
+reccomend for anyone who is interested in learning vim motions and "mouseless" development.
+
+
+# Config
+The main extensions I used to customize the look of VS Code was [APC](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension) which allows the user to 
+ make advanced VS Code user interface customizations, although it is very experimental, it works quite well when changes are made to the  widths and heights of UI components in VS Code. 
+
+To create custom key-bindings you can use the keyboard shortcuts JSON file, where you can create commands mapped to keys:
+```json
+    {
+    "key": "ctrl+space",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": ""
+  },
+```
+And the same process for the user  settings.json file in VS Code:
+```json
+
+"apc.electron": {
+        "titleBarStyle": "hiddenInset",
+    },
+    "apc.listRow": {
+      "height": 24,  
+    },
+    "apc.stylesheet": {
+        ".pane-body":"padding: 8px"
+    },
+   
+    "apc.font.family": "Inter",
+    "window.zoomLevel": 0.8,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+```
+And to use the Vim motions in vscode you would have to add the [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) extension to use the default keybindings or 
+have the ability to modify the Vim keybindings to your own liking.
+
+You can find my personal JSON settings on my github: [Config](https://github.com/kwame-Owusu/VS-CODE-CONFIG)
+
+# Future
+Right now I have been enjoying using minimal VS Code, but I have also heard great things about [Neovim](https://neovim.io/) which is Vim but with more powerful plugins, and one does not need
+to configure the entire IDE from scratch, because you can take advantage of Distributions such as [NvChad](https://nvchad.com/), that comes with all the important features of an IDE right out of the box
+but it will still require a steep learning curve; I plan on eventually moving onto Neovim for better productivity overall and also have great customizability for the way I want my development environment to look.
+
+
+In conclusion, the past few months of embracing a minimal setup in VS Code coupled with Vim motions have been great for my coding experience. By removing unnecessary UI clutter and embracing keyboard-driven navigation,
+ I've found myself not only enjoying a cleaner aesthetic but also significantly boosting my productivity.
