@@ -1,15 +1,12 @@
 ---
-import readingTime from '../components/readingTime';
 
 interface Props {
     title: string;
     date: string;
-    href: string;
-    content: string; 
+    href: string; 
 }
 
-const { href, title, date, content } = Astro.props;
-const Time = readingTime(href);
+const { href, title, date} = Astro.props;
 
 ---
 <div class="outer">
@@ -17,7 +14,6 @@ const Time = readingTime(href);
     <div class="post-content">
       <div class="title"><h1>{title}</h1></div>
       <div class="date">{date}</div>
-      <div class="time">{Time}</div>
     </div>
   </a>
 </div>
