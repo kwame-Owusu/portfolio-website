@@ -1,22 +1,23 @@
 ---
-
 interface Props {
     title: string;
     date: string;
-    href: string; 
+    href: string;
+    topic: string;
 }
-
-const { href, title, date} = Astro.props;
-
+const { href, title, date, topic,} = Astro.props;
 ---
 <div class="outer">
   <a href={href} class="container">
     <div class="post-content">
       <div class="title"><h1>{title}</h1></div>
       <div class="date">{date}</div>
+      <p class="topic">{topic}</p>
     </div>
   </a>
 </div>
+
+
 
 <style>
   .outer{

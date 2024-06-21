@@ -3,6 +3,7 @@ import Post from '../components/Post.astro';
 import Navigation from '../components/Navigation.astro';
 import UsesLayout from '../layouts/UsesLayout.astro';
 import Footer from '../components/Footer.jsx';
+
 ---
 <UsesLayout title='Blog-page'>
   <Navigation />
@@ -21,8 +22,8 @@ import Footer from '../components/Footer.jsx';
     </section>
     <section class="blog-items">
       <div class="container">
-      <Post title='My VS CODE Configuration',  date='2024', href='/posts/blog-2'/>
-      <Post title='Why Use Astro Framework', date='2024', href='/posts/blog-1'/>
+      <Post title='My VS CODE Configuration', date='24 May 2024', href='/posts/blog-2', topic='#tech' />
+      <Post title='Why Use Astro Framework', date='12 April 2024', href='/posts/blog-1', topic='#tech'/>
         
       </div>
 
