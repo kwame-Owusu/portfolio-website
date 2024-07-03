@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.jsx';
-import Paragraph from '../components/paragraph.js'
-import { BioSection, BioYear } from '../components/bio.jsx'
+import Paragraph from '../components/paragraph.js';
+import { BioSection, BioYear } from '../components/bio.jsx';
 import Navigation from '../components/Navigation.astro';
-import Socials from '../components/socials.jsx'
+import Socials from '../components/socials.jsx';
 ---
 
 <Layout title="Kwame-Homepage">
@@ -15,7 +15,7 @@ import Socials from '../components/socials.jsx'
 			<div> <img class="profile-pic"  src="assets/profile-pic.jpg" alt="profile picture"> </div>
 			<div class="name-descriptor-container">
         <div class="name"><h1>Kwame Owusu</h1> </div>
-        <div class="descriptor"><p>Digital Craftsman</p></div>
+        <div class="descriptor"><p></p></div>
     </div>
 		</div>
 		</section>
@@ -59,7 +59,7 @@ import Socials from '../components/socials.jsx'
 		</section>
 		<Socials />
 		<Footer/>
-		
+		<script  src="../components/Names.js"></script>
 	</main>
 
 </Layout>
@@ -81,8 +81,25 @@ import Socials from '../components/socials.jsx'
 		}
 	}
 
-	
-	
+	@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+
 	.profile-pic{
 		display: inline-block;
 		max-width: 150px;
