@@ -20,15 +20,16 @@ const { href, title, date, topic,} = Astro.props;
 
 
 <style>
-  .outer{
-      opacity: 0.5;
-      padding: 8px;
-      transition: transform 0.1s ease;
-  }
-  .outer:hover{
-    transform: translateY(-1px);
+.outer {
+    opacity: 0.5;
+    padding: 8px;
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out; /* Separate transitions with commas */
+}
+
+.outer:hover {
+    transform: translateY(-2px);
     opacity: 1; 
-  }
+}
 
   @media (max-width: 580px) {
     .outer{
