@@ -25,13 +25,3 @@ function changeDescriptor() {
 };
 // Set interval to change the descriptor every 3500ms (3.5 seconds)
 setInterval(changeDescriptor, 3500);
-
-let picIndex = 0;
-function changePic(){
-  const pics  = [ "assets/musashi-2.jpg" , "assets/me.jpg"];
-  let profilePic = document.querySelector(".profile-pic");
-  picIndex = (picIndex + 1) % pics.length;
-  profilePic.src = pics[picIndex];
-};
-changePic();
-setInterval(changePic,10000); // change the profile pic every 10secs
