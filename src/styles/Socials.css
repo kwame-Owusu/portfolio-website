@@ -1,5 +1,5 @@
 .social-arrow {
-  transition: transform 0.3s ease-in-out; /* Add a transition for smooth animation */
+  transition: transform 0.25s ease-in-out; /* Add a transition for smooth animation */
 }
 
 .social-arrow:hover {
@@ -25,11 +25,11 @@
 .social-container a::after {
   content: '';
   position: absolute;
-  bottom: -2px; /* Adjust as needed for positioning */
+  bottom: -2px; 
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust as needed for thickness */
-  background-color: transparent; /* Initially transparent */
+  height: 2px;
+  background-color: transparent; 
   transition: background-color 0.3s ease-in-out; /* Smooth transition */
 }
 
@@ -50,7 +50,7 @@
 
 
 .social-links {
-  padding: 20px; /* Adjust as needed */
+  padding: 20px; 
 }
 
 .social-container {
@@ -76,14 +76,14 @@
   }
 
   .social-container a {
-      margin-bottom: 0.5rem; /* Add spacing between links */
+      margin-bottom: 0.5rem;
   }
 
   .social-arrow {
-      margin-right: 0; /* Remove margin for arrows */
+      margin-right: 0;
   }
 
   span {
-      display: none; /* Hide '/' on lower resolutions */
+      display: none;
   }
 }
