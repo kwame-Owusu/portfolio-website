@@ -29,10 +29,14 @@ const { href, name, device, image} = Astro.props;
   img{
     display: block;
     object-fit: cover;
-    border:1px solid rgba(203,213,225, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 0.75rem;
     width: 350px;
     height: 200px;
+    transition: border ease-in-out 0.5s;
+  }
+  img:hover{
+    border: 1px solid rgba(255, 255, 255, 1);
   }
   .device-name{
     font-weight: 700;
