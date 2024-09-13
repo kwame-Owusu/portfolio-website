@@ -110,6 +110,12 @@ import Socials from '../components/socials.jsx';
 .profile-pic:hover{
 	transform: scale(2); /* Zoom in by 2x */
 }
+
+@media (max-width: 1366px) { /*disable zoom for mobiles */
+	.profile-pic:hover{
+		transform: none;
+	}
+}
 	
 
 	.container {
