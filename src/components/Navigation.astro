@@ -1,64 +1,64 @@
-<div class="navbar-container">
-    <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
-        <a href="/uses">Uses</a>
-        <a href="/blog">Blog</a>
-    </nav>
-</div>
+<nav id="navbar">
+    <div id="tab-highlight"></div>
+    <a href="/" class="nav-item">Home</a>
+    <a href="/projects" class="nav-item">Projects</a>
+    <a href="/uses" class="nav-item">Uses</a>
+    <a href="/blog" class="nav-item">Thoughts</a>
+</nav>
+
+<script is:inline>
+    const wrapper = document.getElementById('navbar');
+    
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('mouseover', (e) => {
+        const wrapperBox = wrapper.getBoundingClientRect();
+        const itemBox = e.target.getBoundingClientRect();
+        
+        const highlight = document.getElementById('tab-highlight');
+        highlight.style.width = `${itemBox.width}px`;
+        highlight.style.height = `${itemBox.height}px`;
+        highlight.style.left = `${itemBox.left - wrapperBox.left}px`;
+        highlight.style.opacity = 1;
+      });
+
+      item.addEventListener('mouseleave', (e) => {
+        document.getElementById('tab-highlight').style.opacity = 0;
+      });
+    });
+</script>
+
 
 <style>
-.navbar-container {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    backdrop-filter: blur(15px); /* Add glass effect */
-    background-color: rgba(27, 26, 26, 0.4); /* Transparent background color */
-    border-radius: 150px;
-    border: 1px solid  rgba(245, 247, 248, 0.5);
-    padding: 10px 20px;
-    display: flex;
-    align-items: center; /* Center links vertically */
-    margin-top: 4px;
-}
 
-.navbar {
+#navbar {
+    text-align: center;
+    position: relative;
     display: flex;
+    gap: 10px;
     justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
+    margin: 80px 0;
+  }
 
-.navbar a {
-    color: rgba(245, 247, 248, 1); 
+.nav-item {
+    font-family: var(--header-font);
+    font-size: 14px;
+    padding: 8px 16px;
     text-decoration: none;
-    padding: 5px 10px;
-    opacity: 0.7; 
-    transition: opacity 0.25s ease-in-out, text-shadow 0.25s ease-in-out, font-size 0.3s ease-in-out; /* Add font-size to the transition */
-    font-size: 16px; /* Initial font size */
+    color: var(--subtext);
+    transition: color 0.2s ease-in-out;
+}
+.nav-item:hover{
+    color: var(--white);
 }
 
-.navbar a:hover {
-    opacity: 1;
-    text-shadow: 0 0 10px rgba(245, 247, 248, 0.4); 
-    font-size: 18px;
-}
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .navbar-container {
-        padding: 5px 10px;
-        height: 40px;
-    }
-
-    .navbar a {
-        font-size: 14px; 
-        padding: 3px 5px; 
-    }
-
-    .navbar a:hover {
-        font-size: 16px; 
-    }
+#tab-highlight{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.25s;
+    pointer-events: none;
 }
 </style>

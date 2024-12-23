@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import {SITE_TITLE, SITE_DESCRIPTION} from "../conts"
+import {SITE_TITLE, SITE_DESCRIPTION} from "../consts"
 ---
 
 <!doctype html>
@@ -13,11 +13,19 @@ import {SITE_TITLE, SITE_DESCRIPTION} from "../conts"
 
 
 <style is:global>
-:root {
-		--font-headers: 'Work Sans',sans-serif;
-		--font-paragraphs: 'Work Sans', sans-serif;
-	
-
+html, :root {
+	--header-font: 'Work Sans',sans-serif;
+	--body-font: 'Work Sans', sans-serif;
+	--white: white;
+  --body: #e5e5e5;
+  --subtext: #a0a0a0;
+  --grey-600: #707070;
+  --grey-700: #4d4d4d;
+  --highlight: #252525;
+  --bg-alt: #1c1c1c;
+  --bg: #0c0c0c;
+  --black: black;
+		
 	}
 
 * {
@@ -25,11 +33,40 @@ import {SITE_TITLE, SITE_DESCRIPTION} from "../conts"
   margin: 0;
   padding: 0;
 }
-html {
-		font-family: var(--font-paragraphs);
-		background-image: url("assets/noisy_1.svg");
-	}
+body{
+	font-family: var(--body-font);
+	background-color: #333;
+	text-rendering: optimizeLegibility;
+  font-kerning: normal;
+
+}
+
+body{
+	height: 100%;
+  width: 100%;
+  margin: 0;
+	color: var(--body);
+	background: var(--bg);
+}
+
+a{
+	color: var(--body);
+	text-decoration: none;
+}
+
+a:visited{
+	color: var(--body);
+	text-decoration: none;
+}
+
 h1{
-		font-family: var(--font-headers)
-	}
+	font-family: var(--header-font);
+
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
 </style>
