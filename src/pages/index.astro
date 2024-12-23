@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.jsx";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 import Socials from "../components/socials.jsx";
 ---
 
@@ -9,18 +9,24 @@ import Socials from "../components/socials.jsx";
   <div class="body-container">
     <Navigation />
     <div class="content">
-      <h1 class="content-header"><b>Kwame Owusu</b></h1>
+			<div class="content-header-container">
+				<h1 class="content-header"><b>Kwame Owusu</b></h1>
+				<img src="../public/assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+			</div>
       <div class="about">
         <p>
-          I'm a Software Engineering student @ NTU,
-          <br />
-          Where I'm honing my skills in various languages and CS theory.
+          I'm a Software Engineering student @ NTU, <br />
+          where I'm honing my skills in various languages and CS theory.
         </p>
+        <br class="br-space" />
 
         <p>
-          passionate about crafting software that's both functional and
+          Passionate about crafting software that's both functional and
           beautiful, while striving to get 1% better every day.
         </p>
+
+        <br class="br-space" />
+
         <p>
           You can find on <a
             href="https://www.linkedin.com/in/alfredow23/"
@@ -32,48 +38,187 @@ import Socials from "../components/socials.jsx";
             target="_blank">alfredowusu595@gmail.com</a
           >
         </p>
+        <div class="section">
+          <div class="sub-heading">What I love</div>
+          <p>
+            I have also cultivated a passion for literature and manga, with <a
+              href=""
+              class="link"
+            >
+              <i>No longer human</i></a
+            >
+            <br />
+            by Osamu Dazai and <a href="" class="link"><i>Vagabond</i></a> by Takehiko
+            Inoue as my favorites.
+          </p>
+        </div>
 
+        <div class="section">
+          <div class="sub-heading">Projects</div>
+          <div id="projects-grid">
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/Pomodoro"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Pomodoro Timer
+              </a>
+              <div class="description">
+                A pomodoro timer created in python and CTK
+              </div>
+            </div>
 
-				<div class="section">
-					<div class="sub-heading">What I love</div>
-					<p>
-						I have also cultivated a passion for literrature and manga, with <a href="" class="link"> <i>No longer human</i></a> <br>
-						by Osamu Dazai and <a href="" class="link"><i>Vagabond</i></a> by Takehiko Inoue as my favorites.
-					</p>
-				</div>
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/study-tracker"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Study Tracker CLI
+              </a>
+              <div class="description">
+                A CLI tool to help me track my studies
+              </div>
+            </div>
 
-				<div class="section">
-					<div class="sub-heading">Projects</div>
-					<div id="projects-grid">
-						<div class="project-grid-item">
-							<a href="" class="title">
-								<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
-									<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
-								</svg>
-								Pomodoro Timer
-							</a>
-							<div class="description">a pomodoro timer created in python and customtkinter</div>
-						</div>
-						<div class="project-grid-item">
-							<a href="" class="title">
-								<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="white">
-									<polygon points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"/>
-								</svg>
-								Pomodoro Timer
-							</a>
-							<div class="description">a pomodoro timer created in Python and Ctk</div>
-						</div>
-					</div>
-				</div>
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/Password-Manager"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Password Manager
+              </a>
+              <div class="description">
+                A password manager using CTK and Crypography.Fernet
+              </div>
+            </div>
+
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/Draggable-Notes"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Draggable Notes
+              </a>
+              <div class="description">
+                Draggable notes made in JS and interact.js
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="sub-heading">Experience</div>
+            <div class="experience" style="margin-bottom: 60px;">
+              <div class="row job">
+                <div class="col-left icon">
+                  <a href="https://zing.dev/" target="_blank"
+                    ><img
+                      src="../public/zing-logo.svg"
+                      alt="icon"
+                      class="icon-img"
+                    /></a
+                  >
+                </div>
+                <div class="col-right">
+                  <div class="line">
+                    <div class="exp-title">Zing.dev</div>
+                  </div>
+                  <div class="exp-description">
+                    Full-Stack Development (incoming)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </Layout>
+<Footer />
 
 <style>
   body {
-    color: white;
+    color: var(--body);
   }
+
+  .content-header-container {
+  position: relative;
+  display: inline-block; /* Ensures the container size fits the text */
+}
+
+.content-header {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.profile-img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateX(-50%);
+  width: 300px; 
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; 
+}
+
+.content-header:hover + .profile-img {
+  opacity: 1; /* Show image on hover */
+}
 
   .body-container {
     flex: 1;
@@ -82,7 +227,6 @@ import Socials from "../components/socials.jsx";
     margin: 0 auto;
     max-width: 650px;
     width: 100%;
-    border: 1px solid red;
   }
 
   h1 {
@@ -92,11 +236,20 @@ import Socials from "../components/socials.jsx";
   }
 
   p {
-    line-height: 1.7em;
+    line-height: 1.75em;
   }
 
   .about {
     font-size: 1rem;
+  }
+
+  .br-space {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 
   a.link {
@@ -105,59 +258,104 @@ import Socials from "../components/socials.jsx";
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: var(--grey-700);
-    transition: border-bottom-color 0.2s ease-in-out;
+    transition: border-bottom-color 0.23s ease-in-out, border-bottom-width 0.23s ease-in-out;
   }
 
   a.link:hover {
-    border-bottom-color: var(--grey-600);
+    border-bottom-color: var(--subtext);
+		border-bottom-width: 4px;
   }
 
-	.section{
-		margin-top: 50px;
-	}
+  .section {
+    margin-top: 50px;
+  }
 
-	.sub-heading{
-		font-weight: 700;
-		font-size: 1.2rem;
-		line-height: 1.2rem;
-		margin-bottom: 24px;
-		color: var(--subtext);
-	}
-	#projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 24px;
-}
+  .sub-heading {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 24px;
+    color: var(--subtext);
+  }
+  #projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 24px;
+  }
 
-.project-grid-item {
-  padding: 16px;
-  border: 1px solid var(--grey-200);
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.title {
-  font-weight: bold;
-  padding: 4px 8px;
-  margin-left: -8px;
-  border-radius: 4px;
-  color: var(--white);
-  transition: background 0.1s ease-in-out, transform 0.25s ease-in-out;;
-}
+  .project-grid-item {
+    margin-bottom: 5px;
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .title {
+    font-weight: bold;
+    padding: 4px 8px;
+    margin-left: -8px;
+    opacity: 1;
+    color: var(--white);
+    transition: opacity 0.23s ease;
+  }
 
-.title:hover {
-  background: rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-}
+  .title:hover {
+    opacity: 0.7;
+  }
 
-.arrow {
-  margin-right: 1px;
-  vertical-align: middle;
-}
+  .title:hover .arrow {
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
 
-.description {
-  margin-top: 8px;
-  color: var(--subtext);
-}
+  .arrow {
+    transition: transform 0.25s ease;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
 
+  .description {
+    margin-top: 8px;
+    color: var(--subtext);
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+    row-gap: 2em;
+  }
+
+  .experience .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .experience .icon {
+    align-self: flex-start;
+  }
+
+  .icon-img {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    margin-right: 16px;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .icon-img:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .exp-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .exp-description {
+    line-height: 1.5em;
+    color: var(--subtext);
+  }
 </style>
