@@ -8,11 +8,11 @@ import Footer from "../components/Footer.astro";
   <div class="body-container">
     <Navigation />
     <div class="content">
-			<div class="content-header-container">
-				<h1 class="content-header"><b>Kwame Owusu</b></h1>
+			<div class="content-header-container" >
+				<h1 class="content-header animate__animated animate__fadeInDown"><b>Kwame Owusu</b></h1>
 				<img src="../public/assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
 			</div>
-      <div class="about">
+      <div class="about   animate__animated animate__fadeInUp">
         <p>
           I'm a Software Engineering student @ NTU, <br />
           where I'm honing my skills in various languages and CS theory.
@@ -190,6 +190,14 @@ import Footer from "../components/Footer.astro";
 <style>
   body {
     color: var(--body);
+  }
+
+  .animate__animated.animate__fadeInUp{
+    --animate-duration: 1.8s;
+  }
+
+  .animate__animated.animate__fadeInUp{
+    --animate-duration: 1.5s;
   }
 
   .content-header-container {
