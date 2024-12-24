@@ -3,68 +3,50 @@ interface Props {
     title: string;
     date: string;
     href: string;
-    topic: string;
 }
-const { href, title, date, topic,} = Astro.props;
+const { href, title, date} = Astro.props;
 ---
-<div class="outer">
-  <a href={href} class="container">
-    <div class="post-content">
-      <div class="title"><h1>{title}</h1></div>
-      <div class="date">{date}</div>
-      <p class="topic">#{topic}</p>
-    </div>
-  </a>
+
+<div class="post-container">
+  <div class="post-item">
+    <a href={href}><p>{title}</p></a>
+    <span>{date}</span>
+  </div>
 </div>
 
 
 
+
 <style>
-.outer {
-    opacity: 0.5;
-    padding: 8px;
-    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out; /* Separate transitions with commas */
-}
+  
+.post-container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  
 
-.outer:hover {
-    transform: translateY(-2px);
-    opacity: 1; 
-}
-
-  @media (max-width: 580px) {
-    .outer{
-      margin: 1rem;
-    }
-    
   }
-  .title{
-    margin-bottom: 10px;
+  .post-container time{
+    color: var(--subtext);
   }
 
-.container{
-  line-height: 1.5rem;
-  text-align: left; 
-}
-a.container{
-  text-decoration: none;
-  color: inherit;
-}
+ .post-item{
+  opacity: 0.65;
+  padding: 16px 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--highlight);
+  gap: 24px;
+  transition: opacity 0.25s ease-in-out;
+ }
+ 
+  .post-item:hover{
+    opacity: 1;
+  }
 
-.description, .date{
-  opacity: 0.7;
-}
-
-.container {
-  display: inline-block; /* Ensures the container wraps around its content */
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-.post-content {
-  line-height: 1.5rem;
-  text-align: left;
-}
-
-
+  .post-item p{
+    font-size: 1.2rem;
+  }
+  
 </style>

@@ -1,92 +1,57 @@
 --- 
 import Post from '../components/Post.astro';
 import Navigation from '../components/Navigation.astro';
-import UsesLayout from '../layouts/UsesLayout.astro';
+import Layout from '../layouts/Layout.astro';
 
-const topics = { 1: "tech", 2:"life", 3:"literature"}
 ---
-<UsesLayout title='Blog-page'>
+<Layout>
   <Navigation />
-  <main>
-    <section class="hero">
-      <h1>Welcome to my blog</h1>
-    </section>
-    
-    <section class="hero-description">
-      <p>
-        This is my blog, I will be writing about all sorts of things in this page,
-        ranging from programming and technology all the way to literature,
-        This will serve as journal for my improvement in programming and life in general.
-      </p>
-      <hr class="hero-separator">
-    </section>
-    <section class="blog-items">
-      <div class="container">
-      <Post title='My VS CODE Configuration', date='24 May 2024', href='/posts/blog-2', topic={topics[1]} />
-      <Post title='Why Use Astro Framework', date='12 April 2024', href='/posts/blog-1', topic={topics[1]}/>
-        
+  <div class="body-container">
+      <div class="blog-about">
+        <h1 class=" animate__animated animate__fadeInDown">My Thoughts</h1>
+        <p class="animate__animated animate__fadeInUp"> I will be writing about all sorts of things on this page, ranging from programming and technology all the way to literature.</p> <br>
+        <p class="animate__animated animate__fadeInUp">This will serve as journal for me to explore my interests in writing about everything and anything.</p>
       </div>
 
-    </section>
-  
-  </main>
-  
-  
+      <div class="blog-container animate__animated animate__fadeInUp">
+        <Post href='posts/blog-1' title='hello world' date='Apr 12th, 2024'/>
+      </div>
+  </div>
 
-</UsesLayout>
 
+</Layout>
 
 <style>
-	main {
-    font-size: 1rem;
-		margin: 0;
-    padding: 0;
-		color: white;
-		line-height: 1.7rem;
-	}
-  hr{
-    color: white;
-    margin-top: 1rem;
+	.body-container {
+    color: var(--body);
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    max-width: 650px;
+    width: 100%;
+  }
+  .blog-about{
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--header-font);
+    font-size: 1.9rem;
+    margin-bottom: 28px;
   }
 
-  .hero {
-  background-image: url('/assets/uses-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  height: 60vh;
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-}
-
-.hero-description, .blog-items{
-  overflow-wrap: break-word;
-  margin: auto;
-	width: 900px;
-	max-width: calc(100% - 2rem);
-  margin-top: 25px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.hero-description p{
- text-indent: 0.5rem;
-}
-
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-
-@media (max-width: 550px){
-  .container{
-    grid-template-columns: repeat(1, minmax(0, 1fr))
+  p {
+    line-height: 1.75em;
   }
-  
-}
 
+
+  .blog-container{
+    margin-bottom: 24px;
+  }
+
+  @media(max-width: 673px){
+    .blog-container{
+      margin-left: 10px;
+      margin-right: 10px;
+    } 
+  }
 </style>
