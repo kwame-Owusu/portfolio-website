@@ -2,6 +2,7 @@
 import Post from '../components/Post.astro';
 import Navigation from '../components/Navigation.astro';
 import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
 
 ---
 <Layout>
@@ -9,16 +10,14 @@ import Layout from '../layouts/Layout.astro';
   <div class="body-container">
       <div class="blog-about">
         <h1 class=" animate__animated animate__fadeInDown">My Thoughts</h1>
-        <p class="animate__animated animate__fadeInUp"> I will be writing about all sorts of things on this page, ranging from programming and technology all the way to literature.</p> <br>
-        <p class="animate__animated animate__fadeInUp">This will serve as journal for me to explore my interests in writing about everything and anything.</p>
+        <p class=" animate__animated animate__fadeInUp"> I will be writing about all sorts of things on this page, ranging from programming and technology all the way to literature.</p> <br>
+        <p class=" animate__animated animate__fadeInUp">This will serve as journal for me to explore my interests in writing about everything and anything.</p>
       </div>
 
       <div class="blog-container animate__animated animate__fadeInUp">
         <Post href='posts/blog-1' title='hello world' date='Apr 12th, 2024'/>
       </div>
   </div>
-
-
 </Layout>
 
 <style>
