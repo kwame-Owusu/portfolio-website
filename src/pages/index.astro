@@ -1,227 +1,375 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.jsx';
-import Paragraph from '../components/paragraph.js';
-import { BioSection, BioYear } from '../components/bio.jsx';
-import Navigation from '../components/Navigation.astro';
-import Socials from '../components/socials.jsx';
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Kwame-Homepage">
-	<Navigation/>
-	<main>
-		<section class="landing-page animate__animated animate__fadeInDown">
-		<div  class="container">
-			<div> <img class="profile-pic"  src="assets/me-2.JPG" alt="profile picture"> </div>
-			<div class="name-descriptor-container">
-        <div class="name"><h1>Kwame Owusu</h1> </div>
-        <div class="descriptor"><p></p></div>
+  <div class="body-container">
+    <Navigation />
+    <div class="content">
+			<div class="content-header-container" >
+				<h1 class="content-header animate__animated animate__fadeInDown"><b>Kwame Owusu</b></h1>
+				<img src="/assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+			</div>
+      <div class="about   animate__animated animate__fadeInUp">
+        <p>
+          I'm a Software Engineering student @ NTU, <br />
+          where I'm honing my skills in various languages and CS theory.
+        </p>
+        <br class="br-space" />
+
+        <p>
+          Passionate about crafting software that's both functional and
+          beautiful, while striving to get 1% better every day.
+        </p>
+
+        <br class="br-space" />
+
+        <p>
+          You can find on <a
+            href="https://www.linkedin.com/in/alfredow23/"
+            class="link"
+            target="_blank">Linkedin</a
+          > or at <a
+            href="mailto:alfredowusu595@gmail.com"
+            class="link"
+            target="_blank">alfredowusu595@gmail.com</a
+          >
+        </p>
+        <div class="section animate__animated animate__fadeInUp">
+          <div class="sub-heading">What I love</div>
+          <p>
+            I have also cultivated a passion for literature and manga, with <a
+              href="https://www.goodreads.com/book/show/194746.No_Longer_Human"
+              class="link"
+              target="_blank"
+            >
+              <i>No longer human</i></a
+            >
+            <br />
+            by Osamu Dazai and <a href="https://www.viz.com/vagabond" class="link" target="_blank"><i>Vagabond</i></a> by Takehiko
+            Inoue as my favorites.
+          </p>
+        </div>
+
+        <div class="section animate__animated animate__fadeInUp">
+          <div class="sub-heading">Projects</div>
+          <div id="projects-grid">
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/Pomodoro"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Pomodoro Timer
+              </a>
+              <div class="description">
+                A pomodoro timer created in python and CTK
+              </div>
+            </div>
+
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/study-tracker"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Study Tracker CLI
+              </a>
+              <div class="description">
+                A CLI tool to help me track my studies
+              </div>
+            </div>
+
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/Password-Manager"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Password Manager
+              </a>
+              <div class="description">
+                A password manager using CTK and Crypography.Fernet
+              </div>
+            </div>
+
+            <div class="project-grid-item">
+              <a
+                href="https://github.com/kwame-Owusu/Draggable-Notes"
+                class="title"
+                target="_blank"
+              >
+                <svg
+                  class="arrow"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="white"
+                >
+                  <polygon
+                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
+                  ></polygon>
+                </svg>
+                Draggable Notes
+              </a>
+              <div class="description">
+                Draggable notes made in JS and interact.js
+              </div>
+            </div>
+          </div>
+
+          <div class="section animate__animated animate__fadeInUp">
+            <div class="sub-heading">Experience</div>
+            <div class="experience" style="margin-bottom: 60px;">
+              <div class="row job">
+                <div class="col-left icon">
+                  <a href="https://zing.dev/" target="_blank"
+                    ><img
+                      src="./zing-logo.svg"
+                      alt="icon"
+                      class="icon-img"
+                    /></a
+                  >
+                </div>
+                <div class="col-right">
+                  <div class="line">
+                    <div class="exp-title">Zing.dev</div>
+                  </div>
+                  <div class="exp-description">
+                    Full-Stack Development (incoming)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-		</div>
-		</section>
-		
-		<section class="who-i-am animate__animated animate__fadeInUp">
-				
-				<div class="about-paragraph">
-					<h1 class="section-underscore">About me</h1>
-					<Paragraph> Hi there!, I'm Kwame, a SWE student in the UK but originally from Ghana, I have a passion for building all sorts of digital things,
-						hence the name "Digital Craftsman", I like coding and creating fun things with code, sometimes even solving some mundane problems.</Paragraph>
-				</div>
-		</section>
-
-
-
-		<section class="Bio  animate__animated animate__fadeInUp" >
-			<h1 class="section-underscore">Bio</h1>
-			<BioSection>
-				<BioYear>2003</BioYear>
-				Born in Kumasi , Ghana.
-			</BioSection>
-			<BioSection>
-				<BioYear>2023</BioYear>
-				I started coding and wrote my first "hello world" in Python.
-			</BioSection>
-			<BioSection>
-				<BioYear>2023 to present</BioYear>
-				I've been studying Software Engineering at university.
-			</BioSection>
-		</section>
-
-		
-		<section class="what-i-like  animate__animated animate__fadeInUp">
-		
-			<div class="underscore-animation">
-			<h1 class="section-underscore">I 🤍</h1>
-			<Paragraph>I have a passion for reading japanese literature and manga. My favourite Book is <a href="https://www.goodreads.com/book/show/194746.No_Longer_Human"  target="_blank"><i>'No Longer Human' by Osamu Dazai</i></a>, and 
-				<a href="https://www.viz.com/vagabond" target="_blank"><i>'Vagabond' by Takehiko Inoue</i></a> stands out as my favourite manga. I also enjoy playing FPS games and excel at them.
-			</Paragraph>
-		</div>
-		</section>
-		<Socials />
-		<Footer/>
-		<script  src="../components/Names.js"></script>
-	</main>
-
+  </div>
 </Layout>
-
+<Footer />
 
 <style>
-	main {
-		margin: auto;
-		width: 900px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 18px;
-		line-height: 1.6;
-	}
+  body {
+    color: var(--body);
+  }
 
-	@media (max-width:476px){
-		main{
-			font-size: 1rem;
-		}
-	}
+  .animate__animated.animate__fadeInUp{
+    --animate-duration: 1.8s;
+  }
 
-	@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  .animate__animated.animate__fadeInUp{
+    --animate-duration: 1.5s;
+  }
+
+  .content-header-container {
+  position: relative;
+  display: inline-block; /* Ensures the container size fits the text */
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.content-header {
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.fade-out {
-  animation: fadeOut 0.5s forwards;
+.profile-img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateX(-50%);
+  width: 300px; 
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in;
 }
 
-.fade-in {
-  animation: fadeIn 0.5s forwards;
+.content-header:hover + .profile-img {
+  opacity: 1; /* Show image on hover */
 }
 
-.profile-pic{
-		display: inline-block;
-		max-width: 180px;
-		height: auto;
-		border-radius: 20px;
-		object-fit: cover;
-		transition: transform 0.3s ease; /* Smooth zoom transition */
-	}
-.profile-pic:hover{
-	transform: scale(2); /* Zoom in by 2x */
-}
-
-@media (max-width: 1366px) { /*disable zoom for mobiles */
-	.profile-pic:hover{
-		transform: none;
-	}
-}
-	
-
-	.container {
-        display: flex;
-        align-items: center; 
-    }
-
-    .name-descriptor-container {
-        margin-left: 30px; /
-    }
-
-    .name h1 {
-        margin: 0; 
-        margin-bottom: 5px;
-    }
-
-    .descriptor p {
-        margin: 0;
-    }
-
-		.landing-page{
-			margin-top: 90px;
-			margin-bottom: 50px;
-		}
-
-		.landing-page {
-    padding: 20px;
-}
-
-.container {
+  .body-container {
+    flex: 1;
     display: flex;
-    align-items: center;
-}
+    flex-flow: column;
+    margin: 0 auto;
+    max-width: 650px;
+    width: 100%;
+  }
 
+  h1 {
+    font-family: var(--header-font);
+    font-size: 1.9rem;
+    margin-bottom: 28px;
+  }
 
-.name-descriptor-container {
-    flex-grow: 1;
-}
+  p {
+    line-height: 1.75em;
+  }
 
-.name, .descriptor {
-    margin: 0; /* Reset margin to avoid extra spacing */
-}
+  .about {
+    font-size: 1rem;
+  }
 
-@media screen and (max-width: 400px) {
-    .container {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    .profile-pic {
-        margin: 0; 
-    }
-
-    .name-descriptor-container {
-        margin-top: 10px;
-    }
-}
-
-		.section-underscore {
-		display: inline;
-    border-bottom: 4px solid #D6EFED; /* Adjust thickness and color as needed */
-    
-	 }
-	.about-paragraph .section-underscore {
+  .br-space {
     margin-bottom: 10px;
-	}
+  }
 
-	.about-paragraph .paragraph {
-    margin-top: 10px;
-	}
-
-
-		.Bio{
-			margin-top: 50px;
-			margin-bottom: 50px;
-		}
-
-
-.underscore-animation a {
-    color: inherit;
+  a {
     text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Added background-color transition */
-    padding: 2px 4px; /* Add padding for a subtle background effect */
-		border-radius: 10px;
-}
+    color: white;
+  }
 
-.underscore-animation a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: auto; /* Adjusted width */
-    height: 1.5px;
-    background-color: #6196A6; /* Color of the line */
-    transform: scaleX(0); /* Initially hidden */
-    transition: transform 0.3s ease-in-out;
-}
+  a.link {
+    text-decoration: none;
+    color: white;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--grey-700);
+    transition: border-bottom-color 0.23s ease-in-out, border-bottom-width 0.23s ease-in-out;
+  }
 
-.underscore-animation a:hover::before {
-    transform: scaleX(1); /* Fully visible on hover */
-}
+  a.link:hover {
+    border-bottom-color: var(--subtext);
+		border-bottom-width: 4px;
+  }
 
-.underscore-animation a:hover {
-    color: #86c0d2; /* Change color on hover */
-    background-color: white; /* White background on hover */
-}
+  .section {
+    margin-top: 50px;
+  }
 
+  .sub-heading {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 24px;
+    color: var(--subtext);
+  }
+  #projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 673px ){
+		#projects-grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .project-grid-item {
+    margin-bottom: 5px;
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .title {
+    font-weight: bold;
+    padding: 4px 8px;
+    margin-left: -8px;
+    opacity: 1;
+    color: var(--white);
+    transition: opacity 0.23s ease;
+  }
+
+  .title:hover {
+    opacity: 0.7;
+  }
+
+  .title:hover .arrow {
+    transform: translateY(-3px);
+    cursor: pointer;
+  }
+
+  .arrow {
+    transition: transform 0.25s ease;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+
+  .description {
+    margin-top: 8px;
+    color: var(--subtext);
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+    row-gap: 2em;
+  }
+
+  .experience .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .experience .icon {
+    align-self: flex-start;
+  }
+
+  .icon-img {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    margin-right: 16px;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .icon-img:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .exp-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .exp-description {
+    line-height: 1.5em;
+    color: var(--subtext);
+  }
 </style>
