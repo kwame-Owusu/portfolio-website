@@ -38,39 +38,47 @@ const {
 			<hr>
 			<div class="main-body">
 			<slot/>
-
 			</div>
-
-
 		</Content>
 
 		
 	</main>
 	<Footer/>
+	
 </body>
-
 </html>
 
 
 <style is:global>
-
-
 :root {
-		--font-headers: 'Work Sans', sans-serif;
-		--font-paragraphs: 'Work Sans',sans-serif;
-	
-
+	--header-font: "Geist", serif;
+	--body-font: "Geist", serif;
+	--white: white;
+  --body: #e5e5e5;
+  --subtext: #a0a0a0;
+  --grey-600: #707070;
+  --grey-700: #4d4d4d;
+  --highlight: #252525;
+  --bg-alt: #1c1c1c;
+  --bg: #0c0c0c;
+  --black: black;
 	}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-	html {
-		font-family: var(--font-paragraphs);
-    color: white;
-		background: #191921; 
-	}
+body{
+	color: var(--body);
+	font-family: var(--body-font);
+	background-color: var(--bg);
+	text-rendering: optimizeLegibility;
+  font-kerning: normal;
+
+}
+main{
+	margin-bottom: 24px;
+}
 	.main-body{
 		font-size: 1rem;
 		padding-left: 8px;
@@ -80,7 +88,7 @@ const {
 		margin-right: auto;
 
 		max-width: 50rem;
-		line-height: 1.75rem;
+		line-height: 1.75em;
 		overflow-wrap: break-word;
 	}
 
@@ -119,32 +127,29 @@ const {
 	hr{
 		margin-top: 1rem;
 		margin-bottom: 1.75rem;
-		border-color: rgba(203,213,225, 0.5);
-	}
-	a{
-		font-style: italic;
+		border-color: var(--grey-600);
 	}
 
-	a{
-		text-decoration: none;
-  	color: white;
-  	position: relative;
-	}
-	a::after{
-		content: '';
-		position: absolute;
-		bottom: -2px;
-		left: 0;
-		width: 100%;
-		height: 2px;
-		background-color: transparent;
-		transition: background-color 0.3s ease-in-out;
-	}
 
-	a:hover::after {
-  background-color: white;
+a:visited{
+	color: var(--body);
+	text-decoration: none;
 }
 
+.main-body a{
+    text-decoration: none;
+    color: white;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--grey-700);
+    transition: border-bottom-color 0.23s ease-in-out, border-bottom-width 0.23s ease-in-out;
+  }
+
+ .main-body a:hover {
+    border-bottom-color: var(--subtext);
+		border-bottom-width: 2.5px;
+  }
+	
 @media (max-width: 773px) {
 
 	.hero-img{
