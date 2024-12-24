@@ -1,64 +1,51 @@
 ---
-import { Image } from "astro:assets"
 interface Props {
 	name: string;
-	device: string;
+	description: string;
 	href: string;
-  image: string;
+
 }
 
-const { href, name, device, image} = Astro.props;
+const { href, name, description} = Astro.props;
 
 ---
 
-<div class="devices">
-  <div class="image-container">
-  <div class="device-img"><a href={href}> <img src={image} decoding="async" alt="device image"> </a></div>
+<div class="uses-container">
+  <div class="device-item">
+    <a href={href}><h3>{name}</h3></a>
+    <p>{description}</p>
   </div>
-  <div class="device-name"><p>{name}</p></div>
-  <div class="device-type"><p>{device}</p></div>
-
 </div>
 
 
 
 <style>
-  .devices{
-   margin-bottom: 0.75rem;
-  }
-  img{
-    display: block;
-    object-fit: cover;
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 0.75rem;
-    width: 350px;
-    height: 200px;
-    transition: border ease-in-out 0.5s;
-  }
-  img:hover{
-    border: 1px solid rgba(255, 255, 255, 1);
-  }
-  .device-name{
-    font-weight: 700;
-    margin-top: 0.5rem;
-    font-size: 1.25rem;
-    line-height: 1.75rem
-  }
-  .device-type{
-    opacity: 0.7
-  }
- 
-  
-@media (max-width: 768px) {
-  img{
-    width: 100%;
-    height: auto;
-    
-  }
-  .image-container{
-    margin: 10px;
-  }
-}
 
+.uses-container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  
+
+  }
+  .uses-container p{
+    color: var(--subtext);
+  }
+
+ .device-item{
+  opacity: 0.65;
+  padding: 16px 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--highlight);
+  gap: 24px;
+  transition: opacity 0.25s ease-in-out;
+ }
+ 
+  .device-item:hover{
+    opacity: 1;
+  }
+  
 
 </style>

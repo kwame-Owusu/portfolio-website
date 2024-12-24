@@ -10,7 +10,7 @@ import Footer from "../components/Footer.astro";
     <div class="content">
 			<div class="content-header-container" >
 				<h1 class="content-header animate__animated animate__fadeInDown"><b>Kwame Owusu</b></h1>
-				<img src="../public/assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
+				<img src="/assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
 			</div>
       <div class="about   animate__animated animate__fadeInUp">
         <p>
@@ -37,12 +37,13 @@ import Footer from "../components/Footer.astro";
             target="_blank">alfredowusu595@gmail.com</a
           >
         </p>
-        <div class="section">
+        <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">What I love</div>
           <p>
             I have also cultivated a passion for literature and manga, with <a
-              href=""
+              href="https://www.goodreads.com/book/show/194746.No_Longer_Human"
               class="link"
+              target="_blank"
             >
               <i>No longer human</i></a
             >
@@ -52,7 +53,7 @@ import Footer from "../components/Footer.astro";
           </p>
         </div>
 
-        <div class="section">
+        <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">Projects</div>
           <div id="projects-grid">
             <div class="project-grid-item">
@@ -156,14 +157,14 @@ import Footer from "../components/Footer.astro";
             </div>
           </div>
 
-          <div class="section">
+          <div class="section animate__animated animate__fadeInUp">
             <div class="sub-heading">Experience</div>
             <div class="experience" style="margin-bottom: 60px;">
               <div class="row job">
                 <div class="col-left icon">
                   <a href="https://zing.dev/" target="_blank"
                     ><img
-                      src="../public/zing-logo.svg"
+                      src="./zing-logo.svg"
                       alt="icon"
                       class="icon-img"
                     /></a
@@ -220,7 +221,7 @@ import Footer from "../components/Footer.astro";
   border-radius: 50%;
   object-fit: cover;
   opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease-in;
 }
 
 .content-header:hover + .profile-img {
@@ -289,6 +290,12 @@ import Footer from "../components/Footer.astro";
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 24px;
+  }
+
+  @media (max-width: 673px ){
+		#projects-grid{
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .project-grid-item {

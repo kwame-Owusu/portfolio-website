@@ -41,6 +41,8 @@ body{
 
 }
 
+
+
 body{
 	height: 100%;
   width: 100%;
@@ -48,7 +50,13 @@ body{
 	color: var(--body);
 	background: var(--bg);
 }
-
+@media (max-width: 673px ){
+		body{
+			margin-left: 24px;
+			margin-right: 24px;
+			width: 90%;
+		}
+}
 a{
 	color: var(--body);
 	text-decoration: none;
