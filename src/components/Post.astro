@@ -3,22 +3,45 @@ interface Props {
     title: string;
     date: string;
     href: string;
+    img: string;
 }
-const { href, title, date} = Astro.props;
+const { href, title, date, img} = Astro.props;
 ---
 
 <div class="post-container">
   <div class="post-item">
-    <a href={href}><p>{title}</p></a>
+    <a href={href}><p><i>{title}</i></p></a>
     <span>{date}</span>
+    <img src={img} alt="blog img" class="blog-img">
   </div>
 </div>
 
 
-
-
 <style>
-  
+.blog-img{
+  border-radius: 5px;
+    height: 150px;
+    left:26%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .2s ease-in;
+    width: 250px;
+}
+
+.post-item:hover .blog-img{
+  opacity: 0.7;
+}
+
+@media(max-width: 1000px){
+  .blog-img{
+    display: none;
+  }
+}
+
+
+
 .post-container{
     display: flex;
     flex-direction: column;
@@ -31,6 +54,7 @@ const { href, title, date} = Astro.props;
   }
 
  .post-item{
+  margin: 0;
   opacity: 0.65;
   padding: 16px 0;
   justify-content: space-between;
@@ -38,10 +62,12 @@ const { href, title, date} = Astro.props;
   align-items: center;
   border-bottom: 1px solid var(--highlight);
   gap: 24px;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, margin 0.25s ease-in-out;
  }
  
   .post-item:hover{
+    margin-left: 10px;
+    margin-right: 10px;
     opacity: 1;
   }
 
