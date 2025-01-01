@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import {SITE_TITLE, SITE_DESCRIPTION} from "../consts"
+import {SITE_TITLE, SITE_DESCRIPTION} from "../consts";
+import "../styles/lora.css"
 ---
 
 <!doctype html>
@@ -14,8 +15,8 @@ import {SITE_TITLE, SITE_DESCRIPTION} from "../consts"
 
 <style is:global>
 html, :root {
-	--header-font: "Geist", serif;
-	--body-font: "Geist", serif;
+	--header-font: Lora-Bold;
+	--body-font: "Geist", sans-serif;
 	--white: white;
   --body: #e5e5e5;
   --subtext: #a0a0a0;
