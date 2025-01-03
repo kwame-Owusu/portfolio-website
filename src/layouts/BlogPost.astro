@@ -1,174 +1,260 @@
 ---
 import Navigation from '../components/Navigation.astro';
-import Content from '../components/Content.astro';
 import Footer from '../components/Footer.astro';
 import BaseHead from '../components/BaseHead.astro';
-import	"../styles/lora.css"
+import "../styles/lora.css";
 
 export interface Props {
-	content: {
-		title: string;
-		Hero?: string;
-		description: string;
-		
-		
-	}
-
+  content: {
+    title: string;
+    Hero?: string;
+    description: string;
+  };
 }
 
 const {
-	content : {title, Hero, description, } 
-} =  Astro.props
+  content: { title, Hero, description },
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<BaseHead/>
-	<Navigation />
-	<body>
-		
-	
-	<main>
-
-		<Content className='content'>
-			<div class="hero-container">
-				{ Hero && ( <img src={Hero}, alt="device-image" width="760" height="360" class="hero-img" decoding="async"  />)}
-			</div>
-			<h1 class="hero-title">{title}</h1>
-			<div>{description}</div>
-			<hr>
-			<div class="main-body">
-			<slot/>
-			</div>
-		</Content>
-
-		
-	</main>
-	<Footer/>
-	
-</body>
+  <BaseHead />
+  <Navigation />
+  <body>
+    <main>
+      <header class="content">
+        <div class="hero-container">
+          {Hero && (
+            <figure>
+              <img
+                src={Hero}
+                alt="Hero image for {title}"
+                class="hero-img"
+                decoding="async"
+              />
+            </figure>
+          )}
+        </div>
+      </header>
+      <article class="main-body">
+				<h1 class="hero-title">{title}</h1>
+        <slot />
+      </article>
+    </main>
+    <Footer />
+  </body>
 </html>
 
-
 <style is:global>
-:root {
-	--header-font: Lora-Bold;
-	--body-font: "Geist", serif;
-	--white: white;
-  --body: #e5e5e5;
-  --subtext: #a0a0a0;
-  --grey-600: #707070;
-  --grey-700: #4d4d4d;
-  --highlight: #252525;
-  --bg-alt: #1c1c1c;
-  --bg: #1A1A19;
-  --black: black;
+	:root {
+		--header-font: Lora-Bold;
+		--body-font: "Geist", serif;
+		--white: white;
+		--body: #e5e5e5;
+		--subtext: #a0a0a0;
+		--grey-600: #707070;
+		--grey-700: #4d4d4d;
+		--highlight: #252525;
+		--bg-alt: #1c1c1c;
+		--bg: #1a1a19;
+		--black: black;
 	}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body{
-	color: var(--body);
-	font-family: var(--body-font);
-	background-color: var(--bg);
-	text-rendering: optimizeLegibility;
-  font-kerning: normal;
-	line-height: 1.75em;
-
-}
-main{
-	margin-bottom: 24px;
-}
-	.main-body{
-		font-size: 1rem;
-		padding-left: 8px;
-		padding-right: 8px;
-		
-		margin-left: auto;
-		margin-right: auto;
-
-		max-width: 50rem;
-		line-height: 1.75em;
-		overflow-wrap: break-word;
-	}
-
-	.main-body img{
-		margin-top: 10px;
-		margin-bottom:10px;
-		opacity: 0.6;
-		border: 1px solid #333;
-	}
-
-	h1{
-		font-family: var(--header-font);
-	}
-
-	body{
+	
+	* {
+		box-sizing: border-box;
 		margin: 0;
-		overflow-wrap: break-word;
+		padding: 0;
 	}
-
-	.content{
-		padding-top: 1.5rem
+	
+	body {
+		color: var(--body);
+		font-family: var(--body-font);
+		background-color: var(--bg);
+		text-rendering: optimizeLegibility;
+		font-kerning: normal;
+		line-height: 1.8em;
+		font-size: 18px;
 	}
-	.hero-container{
+	
+	main {
+		margin-bottom: 24px;
+	}
+	
+	.content {
+		padding-top: 1.5rem;
+	}
+	
+	.hero-container {
+		display: flex;
+		justify-content: center;
 		margin-bottom: 2rem;
 	}
-	.hero-img{
+	
+	.hero-img {
+		opacity: 0.8;
+		border: 1px solid #333;
+		border-radius: 0.5rem;
+		height: 450px;
+		width: auto;
+		object-fit: cover;
+		margin-bottom: 0.5rem;
+	}
+	
+	.hero-title {
+		font-family: var(--header-font);
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+		margin-top: 0.5rem;
+		margin-bottom: 2rem;
+	}
+	
+	.main-body {
+		font-size: 1rem;
+		padding: 0 1rem;
+		margin: 0 auto;
+		max-width: 42rem;
+		line-height: 1.8em;
+		overflow-wrap: break-word;
+	}
+	
+	.main-body img {
+		margin-top: 10px;
+		margin-bottom: 10px;
 		opacity: 0.6;
 		border: 1px solid #333;
-  	border-radius: 0.5rem;
-		height: 450px;
-		width: 720px;
-		object-fit: cover;
 	}
-	.hero-img{
-		margin-top: 30px;
-	}
-	.hero-title{
-		font-size: 1.875rem;
-		line-height: 2.25rem;
-		margin-top: 0.25rem;
-		margin-bottom: 0.25rem;
-	}
-
-	hr{
-		margin-top: 1rem;
-		margin-bottom: 1.75rem;
-		border-color: var(--grey-600);
-	}
-
-a{
-	text-decoration: none;
-}
-a:visited{
-	color: var(--body);
-	text-decoration: none;
-}
-
-.main-body a{
-    text-decoration: none;
-    color: white;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--grey-700);
-    transition: border-bottom-color 0.23s ease-in-out, border-bottom-width 0.23s ease-in-out;
-  }
-
- .main-body a:hover {
-    border-bottom-color: var(--subtext);
-		border-bottom-width: 2.5px;
-  }
 	
-@media (max-width: 773px) {
-
-	.hero-img{
-		width: 100%;
-		height: auto;
+	h1,
+	h2,
+	h3 {
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
 	}
-}
-
-
-</style>
+	
+	p {
+		margin-bottom: 1.75rem;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	a:visited {
+		color: var(--body);
+		text-decoration: none;
+	}
+	
+	.main-body a {
+		text-decoration: none;
+		color: white;
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: var(--grey-700);
+		transition: border-bottom-color 0.23s ease-in-out, border-bottom-width 0.23s ease-in-out;
+	}
+	
+	.main-body a:hover {
+		border-bottom-color: var(--subtext);
+		border-bottom-width: 2.5px;
+	}
+	
+	/* Responsive Design */
+	@media (max-width: 1200px) {
+		.hero-img {
+			width: 100%;
+			height: auto;
+		}
+	
+		.main-body {
+			max-width: 36rem;
+			font-size: 1.05rem;
+		}
+	
+		.hero-title {
+			font-size: 2rem;
+			line-height: 2.25rem;
+		}
+	}
+	
+	@media (max-width: 991px) {
+		.hero-title {
+			font-size: 1.875rem;
+			margin-bottom: 1.5rem;
+		}
+	
+		.main-body {
+			max-width: 32rem;
+			font-size: 1.1rem;
+		}
+	
+		p {
+			margin-bottom: 1.5rem;
+		}
+	
+		.hero-container {
+			margin-bottom: 1.5rem;
+		}
+	}
+	
+	@media (max-width: 768px) {
+		body {
+			font-size: 16px; /* Smaller font size for better readability on smaller devices */
+		}
+	
+		.hero-img {
+			height: 300px;
+			width: 100%;
+		}
+	
+		.hero-title {
+			font-size: 1.625rem;
+			margin-bottom: 1.25rem;
+		}
+	
+		.main-body {
+			padding: 0 0.5rem;
+			max-width: 100%;
+		}
+	
+		p {
+			margin-bottom: 1.5rem;
+		}
+	
+		h1,
+		h2,
+		h3 {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+	}
+	
+	@media (max-width: 575px) {
+		.hero-img {
+			height: 250px;
+			width: 100%;
+		}
+	
+		.hero-title {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+	
+		.main-body {
+			max-width: 100%;
+			padding: 0 1rem;
+			font-size: 1rem;
+		}
+	
+		p {
+			margin-bottom: 1.25rem;
+		}
+	
+		h1,
+		h2,
+		h3 {
+			font-size: 1.4rem;
+		}
+	}
+	</style>
+	
