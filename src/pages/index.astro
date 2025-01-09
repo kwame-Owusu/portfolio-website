@@ -224,6 +224,12 @@ import Footer from "../components/Footer.astro";
   transition: opacity 0.3s ease-in;
 }
 
+@media (max-width: 900px){
+  .profile-img{
+    display: none;
+  }
+}
+
 .content-header:hover + .profile-img {
   opacity: 1; /* Show image on hover */
 }
@@ -372,7 +378,7 @@ a.link:hover::before {
   }
 
   .icon-img {
-    background-color:rgba(255, 255, 255, 0.3);
+    background-color:rgba(129, 82, 247, 0.3);
     height: 50px;
     width: 50px;
     border-radius: 8px;
@@ -382,7 +388,7 @@ a.link:hover::before {
   }
 
   .icon-img:hover {
-    background-color: rgba(255, 255, 255, 0.67);
+    background-color: rgba(129, 82, 247, 0.67);
   }
 
   .exp-title {
