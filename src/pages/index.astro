@@ -3,17 +3,24 @@ import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Project from "../components/Project.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout title="Kwame-Homepage">
   <div class="body-container">
     <Navigation />
     <div class="content">
-			<div class="content-header-container">
-				<h1 class="content-header animate__animated animate__fadeInDown">Kwame Owusu</h1>
-				<img src="/assets/profile-pic.jpg" alt="Profile Picture" class="profile-img">
-			</div>
-      <div class="about   animate__animated animate__fadeInUp">
+      <div class="content-header-container">
+        <h1 class="content-header animate__animated animate__fadeInDown">
+          Kwame Owusu
+        </h1>
+        <img
+          src="/assets/profile-pic.jpg"
+          alt="Profile Picture"
+          class="profile-img"
+        />
+      </div>
+      <div class="about animate__animated animate__fadeInUp">
         <p>
           I'm a Software Engineering student @ NTU, <br />
           where I'm refining my craft in programming, design and CS theory.
@@ -21,8 +28,9 @@ import Project from "../components/Project.astro";
         <br class="br-space" />
 
         <p>
-          Passionate about crafting software that's both functional and beautiful, 
-          I'm also interested in systems, particularly design systems that ensure consistency and elegance.
+          Passionate about crafting software that's both functional and
+          beautiful, I'm also interested in systems, particularly design systems
+          that ensure consistency and elegance.
         </p>
 
         <br class="br-space" />
@@ -49,116 +57,118 @@ import Project from "../components/Project.astro";
               <i>Crime and Punishment</i></a
             >
             <br />
-            by Fyodor Dostoevsky and <a href="https://www.viz.com/vagabond" class="link" target="_blank"><i>Vagabond</i></a> by Takehiko
-            Inoue as my favorites.
+            by Fyodor Dostoevsky and <a
+              href="https://www.viz.com/vagabond"
+              class="link"
+              target="_blank"><i>Vagabond</i></a
+            > by Takehiko Inoue as my favorites.
           </p>
         </div>
 
         <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">Projects</div>
           <div id="projects-grid">
-            <Project 
-              projectName="Pomodoro Timer" 
-              projectDesc="A pomodoro timer created in Python and Ctk" 
-              projectLink="https://github.com/kwame-Owusu/Pomodoro" 
+            <Project
+              projectName="Pomodoro Timer"
+              projectDesc="A pomodoro timer created in Python and Ctk"
+              projectLink="https://github.com/kwame-Owusu/Pomodoro"
             />
-            
-            <Project 
-              projectName="Study Tracker CLI" 
-              projectDesc="A CLI tool to help me track my studies" 
-              projectLink="https://github.com/kwame-Owusu/study-tracker" 
-            />
-            
-            <Project 
-              projectName="Password Manager" 
-              projectDesc="A password manager using Ctk and Cryptography.Fernet" 
-              projectLink="https://github.com/kwame-Owusu/Password-Manager" 
-            />
-            
-            <Project 
-              projectName="Draggable Notes" 
-              projectDesc="Draggable notes made in JS and interact.js" 
-              projectLink="https://github.com/kwame-Owusu/Draggable-Notes" 
-            />
-          </div>
-          </div>
 
-          <div class="section animate__animated animate__fadeInUp">
-            <div class="sub-heading">Experience</div>
-            <div class="experience" style="margin-bottom: 60px;">
-              <div class="row job">
-                <div class="col-left icon">
-                  <a href="https://zing.dev/" target="_blank"
-                    ><img
-                      src="./zing-logo.svg"
-                      alt="icon"
-                      class="icon-img"
-                    /></a
-                  >
-                </div>
-                <div class="col-right">
-                  <div class="line">
-                    <div class="exp-title">Zing.dev</div>
-                  </div>
-                  <div class="exp-description">
-                    Full-Stack Development (incoming)
-                  </div>
-                </div>
-              </div>
+            <Project
+              projectName="Study Tracker CLI"
+              projectDesc="A CLI tool to help me track my studies"
+              projectLink="https://github.com/kwame-Owusu/study-tracker"
+            />
+
+            <Project
+              projectName="Password Manager"
+              projectDesc="A password manager using Ctk and Cryptography.Fernet"
+              projectLink="https://github.com/kwame-Owusu/Password-Manager"
+            />
+
+            <Project
+              projectName="Draggable Notes"
+              projectDesc="Draggable notes made in JS and interact.js"
+              projectLink="https://github.com/kwame-Owusu/Draggable-Notes"
+            />
+          </div>
+        </div>
+
+        <div class="section animate__animated animate__fadeInUp">
+          <div class="sub-heading">Experience</div>
+          <Experience
+              expTitle="Zing.dev"
+              expDesc="Full-Stack Engineering (incoming)"
+              expLink="https://zing.dev/"
+              expLogo="./zing-logo.svg"
+              backgroundColor="rgba(129, 82, 247, 0.3)"  
+              hoverColor="rgba(129, 82, 247, 0.67)"     
+            />
+
+            <Experience
+              expTitle="Creo"
+              expDesc="Web & Data"
+              expLink="https://www.creoofficial.com/"
+              expLogo="./creo-logo.jpg"
+              expIconClass="custom-icon-class"
+              backgroundColor="rgba(0, 0, 0, 0.3)"
+              hoverColor="rgba(60, 61, 55, 0.67)"            
+            />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <Footer />
 </Layout>
-<Footer />
+
 
 <style>
   body {
     color: var(--body);
   }
 
-  .animate__animated.animate__fadeInUp{
+  .animate__animated.animate__fadeInUp {
     --animate-duration: 1.8s;
   }
 
-  .animate__animated.animate__fadeInUp{
+  .animate__animated.animate__fadeInUp {
     --animate-duration: 1.5s;
   }
 
   .content-header-container {
-  position: relative;
-  display: inline-block; /* Ensures the container size fits the text */
-}
-
-.content-header {
-  font-size: 4rem;
-  cursor: pointer;
-}
-
-.profile-img {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  transform: translateX(-50%);
-  width: 300px; 
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease-in;
-}
-
-@media (max-width: 900px){
-  .profile-img{
-    display: none;
+    position: relative;
+    display: inline-block; /* Ensures the container size fits the text */
   }
-}
 
-.content-header:hover + .profile-img {
-  opacity: 1; /* Show image on hover */
-}
+  .content-header {
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  .profile-img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in;
+  }
+
+  @media (max-width: 900px) {
+    .profile-img {
+      display: none;
+    }
+  }
+
+  .content-header:hover + .profile-img {
+    opacity: 1; /* Show image on hover */
+  }
 
   .body-container {
     flex: 1;
@@ -175,7 +185,7 @@ import Project from "../components/Project.astro";
   }
 
   p {
-    letter-spacing: .50px;
+    letter-spacing: 0.5px;
     font-size: 1.3rem;
     line-height: 1.75em;
   }
@@ -197,11 +207,11 @@ import Project from "../components/Project.astro";
     text-decoration: none;
     color: white;
     position: relative;
-    display: inline-block;  
-}
+    display: inline-block;
+  }
 
-a.link::before {
-    content: '';
+  a.link::before {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -209,14 +219,13 @@ a.link::before {
     height: 2px;
     background-color: var(--grey-600);
     transition: height 0.23s ease;
-}
+  }
 
-a.link:hover::before {
+  a.link:hover::before {
     height: 100%;
     background-color: var(--grey-600);
     z-index: -1;
-    
-}
+  }
   .section {
     margin-top: 50px;
   }
@@ -236,13 +245,15 @@ a.link:hover::before {
     margin-top: 24px;
   }
 
-  @media (max-width: 673px ){
-		#projects-grid{
+  @media (max-width: 673px) {
+    #projects-grid {
       grid-template-columns: repeat(1, 1fr);
     }
   }
 
   .experience {
+    padding: 20px;
+    border: solid 1px red;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -260,7 +271,7 @@ a.link:hover::before {
   }
 
   .icon-img {
-    background-color:rgba(129, 82, 247, 0.3);
+    background-color: rgba(129, 82, 247, 0.3);
     height: 50px;
     width: 50px;
     border-radius: 8px;
@@ -283,16 +294,16 @@ a.link:hover::before {
     color: var(--subtext);
   }
 
-  @media (max-width: 499px ){
+  @media (max-width: 499px) {
     .experience {
-    font-size: 1rem;
+      font-size: 1rem;
     }
 
-    .content-header{
+    .content-header {
       font-size: 2.5rem;
     }
 
-    p{
+    p {
       font-size: 1rem;
     }
   }
