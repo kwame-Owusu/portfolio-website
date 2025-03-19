@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
+import Project from "../components/Project.astro";
 ---
 
 <Layout title="Kwame-Homepage">
@@ -56,105 +57,30 @@ import Footer from "../components/Footer.astro";
         <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">Projects</div>
           <div id="projects-grid">
-            <div class="project-grid-item">
-              <a
-                href="https://github.com/kwame-Owusu/Pomodoro"
-                class="title"
-                target="_blank"
-              >
-                <svg
-                  class="arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                >
-                  <polygon
-                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
-                  ></polygon>
-                </svg>
-                Pomodoro Timer
-              </a>
-              <div class="description">
-                A pomodoro timer created in python and Ctk
-              </div>
-            </div>
-
-            <div class="project-grid-item">
-              <a
-                href="https://github.com/kwame-Owusu/study-tracker"
-                class="title"
-                target="_blank"
-              >
-                <svg
-                  class="arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                >
-                  <polygon
-                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
-                  ></polygon>
-                </svg>
-                Study Tracker CLI
-              </a>
-              <div class="description">
-                A CLI tool to help me track my studies
-              </div>
-            </div>
-
-            <div class="project-grid-item">
-              <a
-                href="https://github.com/kwame-Owusu/Password-Manager"
-                class="title"
-                target="_blank"
-              >
-                <svg
-                  class="arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                >
-                  <polygon
-                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
-                  ></polygon>
-                </svg>
-                Password Manager
-              </a>
-              <div class="description">
-                A password manager using Ctk and Crypography.Fernet
-              </div>
-            </div>
-
-            <div class="project-grid-item">
-              <a
-                href="https://github.com/kwame-Owusu/Draggable-Notes"
-                class="title"
-                target="_blank"
-              >
-                <svg
-                  class="arrow"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="white"
-                >
-                  <polygon
-                    points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
-                  ></polygon>
-                </svg>
-                Draggable Notes
-              </a>
-              <div class="description">
-                Draggable notes made in JS and interact.js
-              </div>
-            </div>
+            <Project 
+              projectName="Pomodoro Timer" 
+              projectDesc="A pomodoro timer created in Python and Ctk" 
+              projectLink="https://github.com/kwame-Owusu/Pomodoro" 
+            />
+            
+            <Project 
+              projectName="Study Tracker CLI" 
+              projectDesc="A CLI tool to help me track my studies" 
+              projectLink="https://github.com/kwame-Owusu/study-tracker" 
+            />
+            
+            <Project 
+              projectName="Password Manager" 
+              projectDesc="A password manager using Ctk and Cryptography.Fernet" 
+              projectLink="https://github.com/kwame-Owusu/Password-Manager" 
+            />
+            
+            <Project 
+              projectName="Draggable Notes" 
+              projectDesc="Draggable notes made in JS and interact.js" 
+              projectLink="https://github.com/kwame-Owusu/Draggable-Notes" 
+            />
+          </div>
           </div>
 
           <div class="section animate__animated animate__fadeInUp">
@@ -303,9 +229,6 @@ a.link:hover::before {
     color: var(--subtext);
   }
 
-
-
-
   #projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -317,47 +240,6 @@ a.link:hover::before {
 		#projects-grid{
       grid-template-columns: repeat(1, 1fr);
     }
-  }
-
-
-  .project-grid-item {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    border: 1px solid var(--grey-200);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  .title {
-    letter-spacing: .50px;
-    font-weight: bold;
-    padding: 4px 8px;
-    margin-left: -8px;
-    opacity: 1;
-    color: var(--white);
-    transition: opacity 0.23s ease;
-  }
-
-  .title:hover {
-    opacity: 0.7;
-  }
-
-  .title:hover .arrow {
-    transform: translateY(-5px);
-    cursor: pointer;
-  }
-
-  .arrow {
-    transition: transform 0.25s ease;
-    margin-right: 2px;
-    vertical-align: middle;
-  }
-
-  .description {
-    text-decoration-style: wavy;
-    text-decoration-color: white;
-    margin-top: 8px;
-    color: var(--subtext);
   }
 
   .experience {
@@ -401,8 +283,6 @@ a.link:hover::before {
     color: var(--subtext);
   }
 
-
-  
   @media (max-width: 499px ){
     .experience {
     font-size: 1rem;
@@ -413,10 +293,6 @@ a.link:hover::before {
     }
 
     p{
-      font-size: 1rem;
-    }
-    
-    .project-grid-item{
       font-size: 1rem;
     }
   }
