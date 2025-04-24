@@ -1,17 +1,19 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'Lamzu Maya'
+title: 'Endgame Gear OP1 8K'
 author: Kwame Owusu
 description: 'Mouse'
-Hero: '/posts/maya_6.jpg'
+Hero: '/posts/op18k.jpg'
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes", "gaming"]
 ---
-As someone who enjoys both coding and palying video games, having a reliable mouse is essential.
-At my desk, I rely on the [Lamzu Maya](https://lamzu.com/products/lamzu-maya-4k) as my daily driver.
-it's one of the finest mice I've ever used.With its featherweight design of just 45g, it offers exceptional precision, making it a breeze to aim in FPS games.
-<img src="/posts/maya_3.jpg" width="760" height="360">
-I highly recommend this mouse for any FPS enthusiasts like myself.
+As someone who enjoys both coding and playing video games, having a reliable mouse is essential.
+I have previously touted the Lamzu Maya and many of people who read my previous post on it thanked me for introducing them to it.
+
+But at the moment for "pure" FPS gaming I use the OP1 8k which has been a revelation, the firmware allows me to take full
+advantage of 8k polling rate and I can feel the difference in my aiming accuracy. 
+At my desk, I rely on the [OP1 8K](https://www.endgamegear.com/en-gb/gaming-mice/op1-8k) as my daily driver.
+I highly recommend this mouse for any FPS enthusiasts like myself(don't let the wire deceive you, it's a truly special mouse, just get a mouse bungee).
 
 
 <style>
