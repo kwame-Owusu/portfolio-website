@@ -1,9 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
 import BaseHead from '../components/BaseHead.astro';
 import "../styles/lora.css";
-
 export interface Props {
   content: {
     title: string;
@@ -11,12 +9,10 @@ export interface Props {
     description: string;
   };
 }
-
 const {
   content: { title, Hero, description },
 } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="en">
   <BaseHead />
@@ -42,10 +38,8 @@ const {
         <slot />
       </article>
     </main>
-    <Footer />
   </body>
 </html>
-
 <style is:global>
 	:root {
 		--header-font: Lora-Bold;
@@ -73,8 +67,8 @@ const {
 		background-color: var(--bg);
 		text-rendering: optimizeLegibility;
 		font-kerning: normal;
-		line-height: 1.8em;
-		font-size: 18px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 	
 	main {
@@ -107,15 +101,19 @@ const {
 		line-height: 2.5rem;
 		margin-top: 0.5rem;
 		margin-bottom: 2rem;
+		text-wrap: balance; /* Better line breaks for titles */
 	}
 	
 	.main-body {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		padding: 0 1rem;
 		margin: 0 auto;
-		max-width: 42rem;
-		line-height: 1.8em;
+		max-width: 48rem;
+		line-height: 1.45;
 		overflow-wrap: break-word;
+		hyphens: auto; 
+		text-align: justify; 
+		text-justify: inter-word; 
 	}
 	
 	.main-body img {
@@ -130,10 +128,13 @@ const {
 	h3 {
 		margin-top: 1.5rem;
 		margin-bottom: 1rem;
+		text-wrap: balance; /* Better line breaks for headings */
+		text-align: left; /* Keep headings left-aligned */
 	}
 	
 	p {
 		margin-bottom: 1.75rem;
+		text-wrap: pretty; /* Improved line breaking */
 	}
 	
 	a {
@@ -199,7 +200,12 @@ const {
 	
 	@media (max-width: 768px) {
 		body {
-			font-size: 16px; /* Smaller font size for better readability on smaller devices */
+			font-size: 16px;
+		}
+		
+		.main-body {
+			text-align: left; /* Remove justification on mobile for better readability */
+			hyphens: none; /* Disable hyphenation on mobile */
 		}
 	
 		.hero-img {
@@ -256,5 +262,4 @@ const {
 			font-size: 1.4rem;
 		}
 	}
-	</style>
-	
+</style>
