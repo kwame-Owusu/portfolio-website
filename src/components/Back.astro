@@ -1,0 +1,22 @@
+---
+const pathname = Astro.url.pathname;
+const postRegex = /\/posts\/post-\d+/i;
+const backUrl = postRegex.test(pathname) ? '/uses' : '/blog';
+const backParagraph = backUrl == "/blog" ? "Back to thoughts" : "Back to uses";
+---
+<div class="back-btn">
+    <a href={backUrl}>
+    ← {backParagraph}
+    </a>
+</div>
+
+
+<style>
+    .back-btn{
+        font-style: italic;
+        margin-top: 2.2rem;
+        padding: 0.575rem;
+        font-size: 0.95rem;
+    }
+    
+</style>

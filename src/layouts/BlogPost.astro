@@ -1,7 +1,10 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import BaseHead from '../components/BaseHead.astro';
+import Back from '../components/Back.astro';
 import "../styles/lora.css";
+
+
 export interface Props {
   content: {
     title: string;
@@ -36,6 +39,7 @@ const {
       <article class="main-body">
 				<h1 class="hero-title">{title}</h1>
         <slot />
+		<Back />
       </article>
     </main>
   </body>

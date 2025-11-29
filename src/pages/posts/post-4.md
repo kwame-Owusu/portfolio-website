@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: 'LyxPro HAS-10'
+title: "LyxPro HAS-10"
 author: Kwame Owusu
-description: 'Headset'
-Hero: '/posts/headset_2.jpg'
+description: "Headset"
+Hero: "/posts/headset_2.jpg"
 pubDate: 2022-07-08
 tags: ["astro", "blogging", "learning in public", "successes", "gaming"]
 ---
@@ -13,8 +13,6 @@ for its price I think its quite a decent grab, especially when working with a ti
 <img src="/posts/headset_1.jpg" width="760" height="360">
 
 The audio experience is good, because I do not hear any muffled sound or over the top tuning in the frequency.
-
-
 
 <style>
 img{
