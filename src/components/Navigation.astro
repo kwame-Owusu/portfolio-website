@@ -1,35 +1,11 @@
 <nav id="navbar">
-    <div id="tab-highlight"></div>
-    <a href="/" class="nav-item">Home</a>
-    <a href="/uses" class="nav-item">Uses</a>
-    <a href="/blog" class="nav-item">Thoughts</a>
-    <a href="/reading" class="nav-item">Reading</a>
+    <a href="/" class="nav-item link">Home</a>
+    <a href="/uses" class="nav-item link">Uses</a>
+    <a href="/blog" class="nav-item link">Thoughts</a>
+    <a href="/reading" class="nav-item link">Reading</a>
 </nav>
 
-<script is:inline>
-    const wrapper = document.getElementById('navbar');
-    
-    document.querySelectorAll('.nav-item').forEach(item => {
-      item.addEventListener('mouseover', (e) => {
-        const wrapperBox = wrapper.getBoundingClientRect();
-        const itemBox = e.target.getBoundingClientRect();
-        
-        const highlight = document.getElementById('tab-highlight');
-        highlight.style.width = `${itemBox.width}px`;
-        highlight.style.height = `${itemBox.height}px`;
-        highlight.style.left = `${itemBox.left - wrapperBox.left}px`;
-        highlight.style.opacity = 1;
-      });
-
-      item.addEventListener('mouseleave', (e) => {
-        document.getElementById('tab-highlight').style.opacity = 0;
-      });
-    });
-</script>
-
-
 <style>
-
 #navbar {
     text-align: center;
     position: relative;
@@ -38,7 +14,6 @@
     justify-content: center;
     margin: 80px 0;
   }
-
 .nav-item {
     font-family: var(--body-font);
     font-size: 14px;
@@ -50,15 +25,29 @@
 .nav-item:hover{
     color: var(--white);
 }
-
-#tab-highlight{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    opacity: 0;
-    transition: all 0.25s;
-    pointer-events: none;
+#navbar > a {
+  text-decoration: none;
+  color: white;
+}
+#navbar > a.link {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+#navbar a.link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: var(--grey-600);
+  transition: height 0.2s ease;
+}
+#navbar a.link:hover::before {
+  height: 100%;
+  background-color: var(--grey-600);
+  z-index: -1;
 }
 </style>
