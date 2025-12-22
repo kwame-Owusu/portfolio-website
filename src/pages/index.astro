@@ -54,27 +54,27 @@ import Experience from "../components/Experience.astro";
           <div class="sub-heading">Projects</div>
           <div id="projects-grid">
             <Project
+              projectName="lista"
+              projectDesc="Your todo + notes manager on the terminal"
+              projectLink="https://github.com/kwame-Owusu/lista"
+            />
+
+            <Project
               projectName="sidl"
-              projectDesc="A cli tool to get information about twilio sids, written in Go."
+              projectDesc="A cli tool to get information about twilio sids"
               projectLink="https://github.com/kwame-Owusu/sidl"
             />
 
             <Project
               projectName="umore"
-              projectDesc="Mood tracking web app, written in Typescript."
+              projectDesc="Mood tracking web app"
               projectLink="https://github.com/kwame-Owusu/umore"
             />
 
             <Project
-              projectName="pokedex"
-              projectDesc="A cli pokedex written in Go"
-              projectLink="https://github.com/kwame-Owusu/pokedex"
-            />
-
-            <Project
-              projectName="draggable notes"
-              projectDesc="make notes and drag them around, written in js."
-              projectLink="https://github.com/kwame-Owusu/Draggable-Notes"
+              projectName="accorcia"
+              projectDesc="URL shortener service with redis as data store"
+              projectLink="https://github.com/kwame-Owusu/accorcia"
             />
           </div>
         </div>
@@ -227,6 +227,7 @@ import Experience from "../components/Experience.astro";
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   @media (max-width: 673px) {
