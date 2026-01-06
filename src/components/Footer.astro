@@ -1,9 +1,8 @@
 <div class="footer">
-  <hr />
   <div class="footer-container">
     <div class="row content">
       <div class="footer-content">
-        <span><i> Si Deus Pro Nobis Quis Contra Nos</i></span>
+        <p><i class="note"> Si Deus Pro Nobis Quis Contra Nos</i></p>
         <div class="socials">
           <a href="https://github.com/kwame-Owusu" target="_blank" class="social-link link">
             <svg
@@ -46,15 +45,31 @@
     margin-bottom: 0.5rem;
     opacity: 0.25;
   }
-   
+  .note{
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+  }
 
   .footer-container {
+    border: 1px solid  rgba(112, 112, 112, 0.35);
+    border-radius: 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 650px;
     width: 100%;
+    transition: border 0.2s ease;
   }
+
+  .footer-container:hover{
+    border: 1px solid rgba(112, 112, 112, 1);
+  }
+
+  .footer-container:hover .note{
+      opacity: 0.8;
+  }
+
 
   .footer-content {
     display: flex;
@@ -75,7 +90,6 @@
   }
 
   .social-link {
-    margin-left: 10px;
     opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
   }
