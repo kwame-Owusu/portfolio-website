@@ -1,11 +1,11 @@
-export interface blogPost {
+export interface BlogPost {
     title: string;
     date: string;
     href: string;
     img: string;
 }
 
-export const blogPosts: blogPost[] = [
+export const blogPosts: BlogPost[] = [
     {
         href: 'posts/competence-as-a-virtue',
         title: 'Competence as a virtue',

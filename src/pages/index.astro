@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import Project from "../components/Project.astro";
 import Experience from "../components/Experience.astro";
+import { projects } from "../data/projects";
 ---
 
 <Layout title="Kwame-Homepage">
@@ -52,29 +53,13 @@ import Experience from "../components/Experience.astro";
         <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">Projects</div>
           <div id="projects-grid">
-            <Project
-              projectName="lista"
-              projectDesc="Your todo + notes manager on the terminal"
-              projectLink="https://github.com/kwame-Owusu/lista"
-            />
-
-            <Project
-              projectName="sintesi"
-              projectDesc="Simple system info fetch utility"
-              projectLink="https://github.com/kwame-Owusu/sintesi"
-            />
-
-            <Project
-              projectName="sidl"
-              projectDesc="A cli tool to get information about twilio sids"
-              projectLink="https://github.com/kwame-Owusu/sidl"
-            />
-
-            <Project
-              projectName="accorcia"
-              projectDesc="URL shortener service with redis as data store"
-              projectLink="https://github.com/kwame-Owusu/accorcia"
-            />
+            {projects.map((project) => (
+                <Project
+                  projectName={project.projectName}
+                  projectDesc={project.projectDesc}
+                  projectLink={project.projectLink}
+                />
+              ))}
           </div>
         </div>
 
