@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.6",
-    "@astrojs/mdx": "^4.2.1",
-    "@astrojs/vercel": "^8.0.4",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/vercel": "^9.0.4",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "astro": "^5.5.3",
+    "astro": "^5.17.2",
     "framer-motion": "^11.0.8",
     "typescript": "^5.3.3"
   },
@@ -26,7 +26,7 @@
     "path-to-regexp": "^8.0.0"
   },
   "devDependencies": {
-    "@astrojs/react": "^3.0.10",
+    "@astrojs/react": "^4.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
