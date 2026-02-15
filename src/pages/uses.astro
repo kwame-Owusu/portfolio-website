@@ -2,6 +2,7 @@
 import Navigation from '../components/Navigation.astro'
 import Layout from '../layouts/Layout.astro'
 import Device from '../components/Device.astro'
+import { devices } from '../data/devices'
 ---
 <Layout>
   <Navigation />
@@ -12,13 +13,13 @@ import Device from '../components/Device.astro'
         <p class="animate__animated animate__fadeInUp">Hardware I use on a daily basis.</p> <br>
     </div>
     <div class="devices-container animate__animated animate__fadeInUp">
-      <Device  href='/posts/post-1' name='MateBook 16s(2023)' description='Laptop' />
-      <Device  href='/posts/post-7' name='Keychron V1' description='Keyboard' />
-      <Device  href='/posts/post-2' name='Nikon D3300' description='Camera' />
-      <Device  href='/posts/post-4' name='LyxPro HAS-10' description='Headset' />
-      <Device  href='/posts/post-3' name='EGG OP1 8K' description='Mouse' />
-      <Device  href='/posts/post-5' name='YOTTO Microphone' description='Mic' />
-      <Device  href='/posts/post-6' name='Work Station' description='PC' />
+      {devices.map((device) => (
+        <Device
+          href={device.href}
+          name={device.name}
+          description={device.description}
+        />
+      ))}
     </div>
   </div>
 </Layout>
