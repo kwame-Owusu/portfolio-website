@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Project from "../components/Project.astro";
 import Experience from "../components/Experience.astro";
 import { projects } from "../data/projects";
+import { experiences } from "../data/experiences";
 ---
 
 <Layout title="Kwame-Homepage">
@@ -65,25 +66,17 @@ import { projects } from "../data/projects";
 
         <div>
           <div class="sub-heading">Experience</div>
-          <Experience
-              expTitle="Zing"
-              expDesc="Full Stack"
-              expLink="https://zing.dev/"
-              expLogo="./zing-logo.svg"
-              backgroundColor="rgba(129, 82, 247, 0.3)"  
-              hoverColor="rgba(129, 82, 247, 0.67)"     
-            />
-
-            <Experience
-              expTitle="Creo"
-              expDesc="Web & Data"
-              expLink="https://www.creoofficial.com/"
-              expLogo="./creo-logo.jpg"
-              expIconClass="custom-icon-class"
-              backgroundColor="rgba(0, 0, 0, 0.2)"
-              hoverColor="rgba(0, 0, 0, 0.25)"            
-            />
-            </div>
+          {experiences.map((experience) => (
+                <Experience
+                  expTitle={experience.expTitle}
+                  expDesc={experience.expDesc}
+                  expLink={experience.expLink}
+                  expLogo={experience.expLogo}
+                  expIconClass={experience.expIconClass}
+                  backgroundColor={experience.backgroundColor}
+                  hoverColor={experience.hoverColor}
+                />
+              ))}
           </div>
         </div>
       </div>
