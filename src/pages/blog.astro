@@ -2,6 +2,7 @@
 import Post from '../components/Post.astro';
 import Navigation from '../components/Navigation.astro';
 import Layout from '../layouts/Layout.astro';
+import { blogPosts } from '../data/blogPosts'; 
 
 ---
 <Layout>
@@ -13,8 +14,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="blog-container animate__animated animate__fadeInUp">
-        <Post href='posts/competence-as-a-virtue' title='Competence as a virtue' date='Jan 21st, 2026' img='/blog/infinite_vagabond.png'/>
-        <Post href='posts/in-pursuit-of-depth' title='In pursuit of depth' date='Jan 3rd, 2025' img='/blog/astro.jpg'/>
+        {blogPosts.map((blogPost) => (
+          <Post 
+          href={blogPost.href}
+          title={blogPost.title}
+          date={blogPost.date}
+          img={blogPost.img}
+          />
+        ))}
       </div>
   </div>
 </Layout>
