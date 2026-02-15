@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout.astro";
 import Book from "../components/Book.astro";
 import { books } from "../data/books";
 ---
-
 <Layout>
   <Navigation />
   <div class="body-container">
@@ -34,18 +33,25 @@ import { books } from "../data/books";
       display: flex;
       flex-flow: column;
       margin: 0 auto;
-      max-width: 650px;
+      max-width: 1200px;
       width: 100%;
+      padding: 0 20px;
     }
     .reading-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
       margin-top: 24px;
     }
-    @media (max-width: 561px) {
+    @media (max-width: 768px) {
       .reading-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+    @media (max-width: 480px) {
+      .reading-container {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     .reading-about {
