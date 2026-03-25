@@ -7,6 +7,12 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        href: 'posts/linguistic-decay',
+        title: 'Linguistic decay: a Ghana man problem',
+        date: 'Mar 25, 2026',
+        img: '/blog/cape-coast.jpg'
+    },
+    {
         href: 'posts/competence-as-a-virtue',
         title: 'Competence as a virtue',
         date: 'Jan 21st, 2026',
