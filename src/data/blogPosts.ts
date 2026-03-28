@@ -9,7 +9,7 @@ export const blogPosts: BlogPost[] = [
     {
         href: 'posts/linguistic-decay',
         title: 'Linguistic decay: a Ghana man problem',
-        date: 'Mar 25, 2026',
+        date: 'Mar 25th, 2026',
         img: '/blog/cape-coast.jpg'
     },
     {
