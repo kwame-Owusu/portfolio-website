@@ -10,7 +10,7 @@ export const blogPosts: BlogPost[] = [
         href: 'posts/the-existential-wickedness-of-man',
         title: 'The existential wickedness of man',
         date: 'May 7th, 2026',
-        img: '/blog/mountain-vagabond.jpg'
+        img: '/blog/mountains-vagabond.jpg'
     },
     {
         href: 'posts/linguistic-decay',
