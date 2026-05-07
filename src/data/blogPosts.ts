@@ -7,6 +7,12 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        href: 'posts/the-existential-wickedness-of-man',
+        title: 'The existential wickedness of man',
+        date: 'May 7th, 2026',
+        img: '/blog/mountain-vagabond.jpg'
+    },
+    {
         href: 'posts/linguistic-decay',
         title: 'Linguistic decay: a Ghana man problem',
         date: 'Mar 25th, 2026',
