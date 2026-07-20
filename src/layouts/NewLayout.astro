@@ -12,9 +12,8 @@ const {title, Hero, description} = frontmatter;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
+	<BaseHead title={title} description={description} />
+	<style is:global>
 			html{
 				background-color: #191921;
 				color: white;
@@ -61,8 +60,7 @@ const {title, Hero, description} = frontmatter;
 
 
 			
-		</style>
-	</head>
+	</style>
 
 	<body>
 	<Navigation/>

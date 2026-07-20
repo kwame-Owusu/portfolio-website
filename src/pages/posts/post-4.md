@@ -13,24 +13,3 @@ for its price I think its quite a decent grab, especially when working with a ti
 <img src="/posts/headset_1.jpg" width="760" height="360">
 
 The audio experience is good, because I do not hear any muffled sound or over the top tuning in the frequency.
-
-<style>
-img{
-  border: 1px solid rgba(203,213,225, 0.5);
-  border-radius: 0.5rem;
-	height: 500px;
-	width: 720px;
-	object-fit:cover;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 773px) {
-
-	img{
-		width: 100%;
-		height: auto;
-	}
-}
-
-</style>

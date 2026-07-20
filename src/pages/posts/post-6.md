@@ -25,24 +25,3 @@ My Work station is also the same PC I use for my gaming. Here is a list of the c
 After two years together with this PC, I am really satisfied with the performance and how quiet it is even under heavy load, the Noctua fans are a true life saver, and I would reccomend them over any other fan brand when it comes to PC builds.
 
 The CPU and GPU are a perfect fit for each other because there is no bottleneck whatsoever when gaming, so I am able to always maximize my frames when palying. Overall, all components work together well, and are working as expected.
-
-<style>
-img{
-  border: 1px solid rgba(203,213,225, 0.5);
-  border-radius: 0.5rem;
-	height: 500px;
-	width: 720px;
-	object-fit:cover;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 773px) {
-
-	img{
-		width: 100%;
-		height: auto;
-	}
-}
-
-</style>
