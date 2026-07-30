@@ -9,14 +9,14 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     expCompany: 'Zing',
-    expRole: 'Full Stack',
+    expRole: 'Software Engineer',
     expYear: '2026',
     expLink: 'https://zing.dev/',
     expLogo: './zing-logo.svg',
   },
   {
     expCompany: 'Creo',
-    expRole: 'Web & Data',
+    expRole: 'Software Engineer',
     expYear: '2025',
     expLink: 'https://www.creoofficial.com/',
     expLogo: './creo-logo.jpg',
