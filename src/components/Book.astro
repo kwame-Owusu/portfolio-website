@@ -107,4 +107,20 @@ const { bookAuthor, bookName, bookStatus, bookLink } = Astro.props;
     background-color: #fdab9e;
     color: #333;
   }
+
+  @media (max-width: 600px) {
+    .book-row {
+      gap: 12px;
+      padding: 12px 14px;
+    }
+
+    .book-name {
+      max-width: 160px;
+      font-size: 0.9rem;
+    }
+
+    .book-author {
+      font-size: 0.75rem;
+    }
+  }
 </style>
