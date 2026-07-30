@@ -65,17 +65,15 @@ import { experiences } from '../info/experiences';
         </div>
 
         <div>
-          <div class="sub-heading">Experience</div>
+          <div class="sub-heading">Work Life</div>
           {
             experiences.map((experience) => (
               <Experience
-                expTitle={experience.expTitle}
-                expDesc={experience.expDesc}
+                expCompany={experience.expCompany}
+                expRole={experience.expRole}
+                expYear={experience.expYear}
                 expLink={experience.expLink}
                 expLogo={experience.expLogo}
-                expIconClass={experience.expIconClass}
-                backgroundColor={experience.backgroundColor}
-                hoverColor={experience.hoverColor}
               />
             ))
           }
@@ -214,53 +212,7 @@ import { experiences } from '../info/experiences';
     }
   }
 
-  .experience {
-    padding: 20px;
-    border: solid 1px red;
-    display: flex;
-    flex-direction: column;
-    line-height: 1em;
-    row-gap: 2em;
-  }
-
-  .experience .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .experience .icon {
-    align-self: flex-start;
-  }
-
-  .icon-img {
-    background-color: rgba(129, 82, 247, 0.3);
-    height: 50px;
-    width: 50px;
-    border-radius: 8px;
-    margin-right: 16px;
-    padding: 10px;
-    transition: background-color 0.2s ease-in-out;
-  }
-
-  .icon-img:hover {
-    background-color: rgba(129, 82, 247, 0.67);
-  }
-
-  .exp-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .exp-description {
-    line-height: 1.5em;
-    color: var(--subtext);
-  }
-
   @media (max-width: 499px) {
-    .experience {
-      font-size: 1rem;
-    }
-
     .content-header {
       font-size: 2.5rem;
     }

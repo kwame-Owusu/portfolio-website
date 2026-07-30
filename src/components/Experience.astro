@@ -2,86 +2,63 @@
 interface Props {
   expLink: string;
   expLogo: string;
-  expTitle: string;
-  expDesc: string;
-  expIconClass?: string;
-  backgroundColor?: string;
-  hoverColor?: string;
+  expCompany: string;
+  expRole: string;
+  expYear: string;
 }
 
-const {
-  expLink,
-  expLogo,
-  expTitle,
-  expDesc,
-  expIconClass,
-  backgroundColor = 'rgba(129, 82, 247, 0.3)',
-  hoverColor = 'rgba(129, 82, 247, 0.67)',
-} = Astro.props;
+const { expLink, expLogo, expCompany, expRole, expYear } = Astro.props;
 ---
 
-<div class="experience">
-  <div class="row job">
-    <div class="col-left icon">
-      <a href={expLink} target="_blank">
-        <img
-          src={expLogo}
-          alt="icon"
-          class={`icon-img ${expIconClass || ''}`}
-          style={`--bg-color: ${backgroundColor}; --hover-color: ${hoverColor};`}
-        />
-      </a>
-    </div>
-    <div class="col-right">
-      <div class="line">
-        <div class="exp-title">{expTitle}</div>
-      </div>
-      <div class="exp-description">{expDesc}</div>
-    </div>
-  </div>
+<div class="experience-row">
+  <img src={expLogo} alt={`${expCompany} logo`} class="exp-icon" />
+  <span class="exp-role">{expRole}</span>
+  <a href={expLink} target="_blank" class="exp-company">{expCompany}</a>
+  <span class="exp-year">{expYear}</span>
 </div>
 
 <style>
-  .experience {
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
-    font-size: 1.1rem;
+  .experience-row {
+    padding: 16px 18px;
+    justify-content: space-between;
     display: flex;
-    flex-direction: column;
-    line-height: 1em;
-    row-gap: 2em;
-  }
-  .experience .row {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-  }
-  .experience .icon {
-    align-self: flex-start;
-  }
-  .icon-img {
-    background-color: var(--bg-color, rgba(129, 82, 247, 0.3));
-    height: 40px;
-    width: 40px;
+    gap: 12px;
     border-radius: 8px;
-    margin-right: 16px;
-    padding: 10px;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
   }
-  .icon-img:hover {
-    background-color: var(--hover-color, rgba(129, 82, 247, 0.67));
+
+  .experience-row:hover {
+    background-color: var(--bg-alt);
   }
-  .exp-title {
-    font-weight: normal;
-    margin-bottom: 5px;
+
+  .exp-icon {
+    height: 28px;
+    width: 28px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    object-fit: cover;
   }
-  .exp-description {
-    line-height: 1.5em;
+
+  .exp-role {
     color: var(--subtext);
+    font-size: 0.9rem;
+    flex-shrink: 0;
   }
-  @media (max-width: 499px) {
-    .experience {
-      font-size: 1rem;
-    }
+
+  .exp-company {
+    color: var(--white);
+    opacity: 0.7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .exp-year {
+    color: var(--subtext);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+    margin-left: auto;
   }
 </style>
