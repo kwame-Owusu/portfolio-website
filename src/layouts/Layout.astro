@@ -1,81 +1,75 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import {SITE_TITLE, SITE_DESCRIPTION} from "../consts";
-import "../styles/lora.css"
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/lora.css';
 ---
 
 <!doctype html>
 <html lang="en">
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<body>
-		<slot />
-	</body>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <body>
+    <slot />
+  </body>
 </html>
 
-
 <style is:global>
-html, :root {
-	--header-font: Lora-Bold;
-	--body-font: "Geist", sans-serif;
-	--white: white;
-  --body: #e5e5e5;
-  --subtext: #a0a0a0;
-  --grey-600: #707070;
-  --grey-700: #4d4d4d;
-  --highlight: #252525;
-  --bg-alt: #1c1c1c;
-  --bg: #1A1A19;
-  --black: black;
-		
-	}
+  html,
+  :root {
+    --header-font: Lora-Bold;
+    --body-font: 'Geist', sans-serif;
+    --white: white;
+    --body: #e5e5e5;
+    --subtext: #a0a0a0;
+    --grey-600: #707070;
+    --grey-700: #4d4d4d;
+    --highlight: #252525;
+    --bg-alt: #1c1c1c;
+    --bg: #1a1a19;
+    --black: black;
+  }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body{
-	font-family: var(--body-font);
-	background-color: #333;
-	text-rendering: optimizeLegibility;
-  	font-kerning: normal;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: var(--body-font);
+    background-color: #333;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+  }
 
-}
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: var(--body);
+    background: var(--bg);
+  }
+  @media (max-width: 673px) {
+    body {
+      margin-left: 24px;
+      margin-right: 24px;
+      width: 90%;
+    }
+  }
+  a {
+    color: var(--body);
+    text-decoration: none;
+  }
 
+  a:visited {
+    color: var(--body);
+    text-decoration: none;
+  }
 
+  h1 {
+    font-family: var(--header-font);
+  }
 
-body{
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  color: var(--body);
-  background: var(--bg);
-}
-@media (max-width: 673px ){
-		body{
-			margin-left: 24px;
-			margin-right: 24px;
-			width: 90%;
-		}
-}
-a{
-	color: var(--body);
-	text-decoration: none;
-}
-
-a:visited{
-	color: var(--body);
-	text-decoration: none;
-}
-
-h1{
-	font-family: var(--header-font);
-
-}
-
-body{
-	display: flex;
-	flex-direction: column;
-}
-
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 </style>

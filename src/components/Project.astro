@@ -4,76 +4,82 @@ interface Props {
   projectDesc: string;
   projectLink: string;
 }
-const {projectName, projectDesc, projectLink } = Astro.props;
+const { projectName, projectDesc, projectLink } = Astro.props;
 ---
 
-<div class="project-grid-item">
-  <div class="project-header">
-    <a
-      href={projectLink}
-      class="project-title"
-      target="_blank"
-    >
+<div class="project-card">
+  <a href={projectLink} target="_blank">
+    <div class="card-header">
+      <span class="project-name">{projectName}</span>
       <svg
         class="arrow"
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
+        width="16"
+        height="16"
         viewBox="0 0 24 24"
-        fill="white"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       >
-        <polygon
-          points="7 7 15.586 7 5.293 17.293 6.707 18.707 17 8.414 17 17 19 17 19 5 7 5 7 7"
-        ></polygon>
+        <line x1="7" y1="17" x2="17" y2="7"></line>
+        <polyline points="7 7 17 7 17 17"></polyline>
       </svg>
-      {projectName}
-    </a>
-  </div>
-  <div class="project-desc">  
-    {projectDesc}
-  </div>
+    </div>
+    <p class="project-desc">{projectDesc}</p>
+  </a>
 </div>
 
 <style>
-  .project-grid-item {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    border: 1px solid var(--grey-200);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  .project-card {
+    border: 1px solid var(--highlight);
+    border-radius: 10px;
+    padding: 20px;
+    transition:
+      transform 0.25s ease-in-out,
+      border-color 0.25s ease-in-out;
   }
-  .project-title {
-    letter-spacing: .50px;
-    font-weight: bold;
-    padding: 4px 8px;
-    margin-left: -8px;
-    opacity: 1;
+
+  .project-card:hover {
+    border-color: var(--grey-600);
+  }
+
+  .project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .project-name {
     color: var(--white);
-    transition: opacity 0.23s ease;
+    font-size: 1.05rem;
   }
 
-  .project-title:hover {
-    opacity: 0.7;
-  }
-
-  .project-title:hover .arrow {
-    transform: translateY(-5px);
-    cursor: pointer;
-  }
-  .arrow {
-    transition: transform 0.25s ease;
-    margin-right: 2px;
-    vertical-align: middle;
-  }
-  .project-desc{
-    text-decoration-style: wavy;
-    text-decoration-color: white;
-    margin-top: 8px;
+  .project-desc {
     color: var(--subtext);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
   }
-  @media(max-width: 499px){
-    .project-grid-item{
-      font-size: 1rem;
-    }
+
+  .arrow {
+    color: var(--subtext);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .project-card:hover .arrow {
+    transform: translateX(2.5px);
+    transition: ease-out 0.25s;
   }
 </style>

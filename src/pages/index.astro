@@ -1,11 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-import Project from "../components/Project.astro";
-import Experience from "../components/Experience.astro";
-import { projects } from "../info/projects";
-import { experiences } from "../info/experiences";
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Project from '../components/Project.astro';
+import Experience from '../components/Experience.astro';
+import { projects } from '../info/projects';
+import { experiences } from '../info/experiences';
 ---
 
 <Layout title="Kwame-Homepage">
@@ -24,12 +24,13 @@ import { experiences } from "../info/experiences";
       </div>
       <div class="about animate__animated animate__fadeInUp">
         <p>
-          I'm a software engineer refining my craft in building software, drawn to writing software that's clean, efficient, and built to last. 
+          I'm a software engineer refining my craft in building software, drawn
+          to writing software that's clean, efficient, and built to last.
           <br />
           I also occasionally write about stuff.
         </p>
 
-        <br/>
+        <br />
 
         <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">What I love</div>
@@ -51,30 +52,32 @@ import { experiences } from "../info/experiences";
         <div class="section animate__animated animate__fadeInUp">
           <div class="sub-heading">Projects</div>
           <div id="projects-grid">
-            {projects.map((project) => (
+            {
+              projects.map((project) => (
                 <Project
                   projectName={project.projectName}
                   projectDesc={project.projectDesc}
                   projectLink={project.projectLink}
                 />
-              ))}
+              ))
+            }
           </div>
         </div>
 
         <div>
-          <div class="sub-heading">Experience</div>
-          {experiences.map((experience) => (
-                <Experience
-                  expTitle={experience.expTitle}
-                  expDesc={experience.expDesc}
-                  expLink={experience.expLink}
-                  expLogo={experience.expLogo}
-                  expIconClass={experience.expIconClass}
-                  backgroundColor={experience.backgroundColor}
-                  hoverColor={experience.hoverColor}
-                />
-              ))}
-          </div>
+          <div class="sub-heading">Work Life</div>
+          {
+            experiences.map((experience) => (
+              <Experience
+                expCompany={experience.expCompany}
+                expRole={experience.expRole}
+                expYear={experience.expYear}
+                expLink={experience.expLink}
+                expLogo={experience.expLogo}
+              />
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>
@@ -100,13 +103,13 @@ import { experiences } from "../info/experiences";
   }
 
   .content-header {
-    font-size: 4rem;
+    font-size: 3rem;
     cursor: pointer;
   }
 
-  .creo-icon{
-      width: 100px;
-      height: 100px;
+  .creo-icon {
+    width: 100px;
+    height: 100px;
   }
 
   .profile-img {
@@ -148,7 +151,7 @@ import { experiences } from "../info/experiences";
 
   p {
     letter-spacing: 0.5px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.8;
   }
 
@@ -169,7 +172,7 @@ import { experiences } from "../info/experiences";
   }
 
   a.link::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -199,64 +202,17 @@ import { experiences } from "../info/experiences";
   #projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 24px;
+    gap: 20px;
     margin-bottom: 30px;
   }
 
   @media (max-width: 673px) {
     #projects-grid {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
     }
-  }
-
-  .experience {
-    padding: 20px;
-    border: solid 1px red;
-    display: flex;
-    flex-direction: column;
-    line-height: 1em;
-    row-gap: 2em;
-  }
-
-  .experience .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .experience .icon {
-    align-self: flex-start;
-  }
-
-  .icon-img {
-    background-color: rgba(129, 82, 247, 0.3);
-    height: 50px;
-    width: 50px;
-    border-radius: 8px;
-    margin-right: 16px;
-    padding: 10px;
-    transition: background-color 0.2s ease-in-out;
-  }
-
-  .icon-img:hover {
-    background-color: rgba(129, 82, 247, 0.67);
-  }
-
-  .exp-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .exp-description {
-    line-height: 1.5em;
-    color: var(--subtext);
   }
 
   @media (max-width: 499px) {
-    .experience {
-      font-size: 1rem;
-    }
-
     .content-header {
       font-size: 2.5rem;
     }

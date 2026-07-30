@@ -10,9 +10,18 @@ const { bookImage, bookAuthor, bookName, bookStatus, bookLink } = Astro.props;
 ---
 
 <div class="book-container">
-  <a href={bookLink} target="_blank" rel="noopener noreferrer" class="book-item">
+  <a
+    href={bookLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="book-item"
+  >
     <div class="book-img">
-      <img src={bookImage} alt={`${bookName} by ${bookAuthor}`} loading="lazy" />
+      <img
+        src={bookImage}
+        alt={`${bookName} by ${bookAuthor}`}
+        loading="lazy"
+      />
     </div>
     <div class="book-details">
       <p class="book-author">{bookAuthor}</p>
@@ -23,21 +32,21 @@ const { bookImage, bookAuthor, bookName, bookStatus, bookLink } = Astro.props;
 </div>
 
 <script>
-  let bookStatuses = document.querySelectorAll(".book-status");
+  let bookStatuses = document.querySelectorAll('.book-status');
   bookStatuses.forEach((bookStatus) => {
     let statusText = bookStatus.textContent?.trim();
     switch (statusText) {
-      case "Reading":
-        bookStatus.classList.add("reading");
+      case 'Reading':
+        bookStatus.classList.add('reading');
         break;
-      case "To Read":
-        bookStatus.classList.add("to-read");
+      case 'To Read':
+        bookStatus.classList.add('to-read');
         break;
-      case "Read":
-        bookStatus.classList.add("read");
+      case 'Read':
+        bookStatus.classList.add('read');
         break;
       default:
-        bookStatus.classList.add("to-read");
+        bookStatus.classList.add('to-read');
         break;
     }
   });
@@ -123,46 +132,45 @@ const { bookImage, bookAuthor, bookName, bookStatus, bookLink } = Astro.props;
     }
   }
   @media (max-width: 589px) {
-  .book-item {
-    flex-direction: column;
-    align-items: center;
-  }
+    .book-item {
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .book-img {
-    width: 100px;
-    height: 120px;
-    margin-bottom: 10px;
-  }
+    .book-img {
+      width: 100px;
+      height: 120px;
+      margin-bottom: 10px;
+    }
 
-  .book-details {
-    padding-left: 0;
-    margin-top: 0;
-    flex-direction: column; 
-    align-items: flex-start; 
-    width: 100%;
-    gap: 4px;
-  }
+    .book-details {
+      padding-left: 0;
+      margin-top: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 4px;
+    }
 
-  .book-status {
-    font-size: 0.65rem;
-    padding: 0.1rem 0.3rem;
-    margin-bottom: 2px; 
-  }
+    .book-status {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.3rem;
+      margin-bottom: 2px;
+    }
 
-  p.book-name {
-    font-size: 0.75rem;
-    line-height: 1.2;
-    text-align: left;
-  }
+    p.book-name {
+      font-size: 0.75rem;
+      line-height: 1.2;
+      text-align: left;
+    }
 
-  p.book-author {
-    font-size: 0.65rem;
-    text-align: left;
-  }
+    p.book-author {
+      font-size: 0.65rem;
+      text-align: left;
+    }
 
-  .book-container {
-    padding: 8px;
+    .book-container {
+      padding: 8px;
+    }
   }
-}
-
 </style>
