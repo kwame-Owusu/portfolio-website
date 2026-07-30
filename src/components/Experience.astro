@@ -15,8 +15,8 @@ const {
   expTitle,
   expDesc,
   expIconClass,
-  backgroundColor = "rgba(129, 82, 247, 0.3)",
-  hoverColor = "rgba(129, 82, 247, 0.67)",
+  backgroundColor = 'rgba(129, 82, 247, 0.3)',
+  hoverColor = 'rgba(129, 82, 247, 0.67)',
 } = Astro.props;
 ---
 
@@ -24,10 +24,10 @@ const {
   <div class="row job">
     <div class="col-left icon">
       <a href={expLink} target="_blank">
-        <img 
-          src={expLogo} 
-          alt="icon" 
-          class={`icon-img ${expIconClass || ''}`} 
+        <img
+          src={expLogo}
+          alt="icon"
+          class={`icon-img ${expIconClass || ''}`}
           style={`--bg-color: ${backgroundColor}; --hover-color: ${hoverColor};`}
         />
       </a>
@@ -45,7 +45,7 @@ const {
   .experience {
     margin-bottom: 1.5rem;
     margin-top: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: flex;
     flex-direction: column;
     line-height: 1em;
@@ -61,8 +61,8 @@ const {
   }
   .icon-img {
     background-color: var(--bg-color, rgba(129, 82, 247, 0.3));
-    height: 48px;
-    width: 48px;
+    height: 38px;
+    width: 38px;
     border-radius: 8px;
     margin-right: 16px;
     padding: 10px;
@@ -72,7 +72,7 @@ const {
     background-color: var(--hover-color, rgba(129, 82, 247, 0.67));
   }
   .exp-title {
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 5px;
   }
   .exp-description {
@@ -81,12 +81,6 @@ const {
   }
   @media (max-width: 499px) {
     .experience {
-      font-size: 1rem;
-    }
-    .content-header {
-      font-size: 2.5rem;
-    }
-    p {
       font-size: 1rem;
     }
   }

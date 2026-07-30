@@ -1,33 +1,36 @@
---- 
-import Navigation from '../components/Navigation.astro'
-import Layout from '../layouts/Layout.astro'
-import Device from '../components/Device.astro'
-import { devices } from '../info/devices'
 ---
+import Navigation from '../components/Navigation.astro';
+import Layout from '../layouts/Layout.astro';
+import Device from '../components/Device.astro';
+import { devices } from '../info/devices';
+---
+
 <Layout>
   <Navigation />
   <div class="body-container">
-
     <div class="user-about">
-        <h1 class=" animate__animated animate__fadeInDown">Tech I use</h1>
-        <p class="animate__animated animate__fadeInUp">Hardware I use on a daily basis.</p> <br>
+      <h1 class="animate__animated animate__fadeInDown">Tech I use</h1>
+      <p class="animate__animated animate__fadeInUp">
+        Hardware I use on a daily basis.
+      </p>
+      <br />
     </div>
     <div class="devices-container animate__animated animate__fadeInUp">
-      {devices.map((device) => (
-        <Device
-          href={device.href}
-          name={device.name}
-          description={device.description}
-        />
-      ))}
+      {
+        devices.map((device) => (
+          <Device
+            href={device.href}
+            name={device.name}
+            description={device.description}
+          />
+        ))
+      }
     </div>
   </div>
 </Layout>
 
-
-
 <style>
-.body-container {
+  .body-container {
     color: var(--body);
     display: flex;
     flex-flow: column;
@@ -36,11 +39,10 @@ import { devices } from '../info/devices'
     width: 100%;
   }
 
-  .user-about{
+  .user-about {
     margin-bottom: 50px;
   }
 
-  
   h1 {
     font-family: var(--header-font);
     font-size: 2.5rem;
@@ -48,31 +50,28 @@ import { devices } from '../info/devices'
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.75em;
   }
 
-  .devices-container{
+  .devices-container {
     margin-bottom: 24px;
   }
 
-  @media(max-width: 673px){
-    .devices-container{
+  @media (max-width: 673px) {
+    .devices-container {
       margin-left: 10px;
       margin-right: 10px;
-    } 
+    }
   }
 
-
-  @media(max-width: 490px){
+  @media (max-width: 490px) {
     h1 {
-    font-size: 2rem;
-  }
+      font-size: 2rem;
+    }
 
-  p {
-    font-size: 1rem;
+    p {
+      font-size: 1rem;
+    }
   }
-  }
-
 </style>
-

@@ -1,33 +1,38 @@
---- 
+---
 import Post from '../components/Post.astro';
 import Navigation from '../components/Navigation.astro';
 import Layout from '../layouts/Layout.astro';
-import { blogPosts } from '../info/blogPosts'; 
-
+import { blogPosts } from '../info/blogPosts';
 ---
+
 <Layout>
   <Navigation />
   <div class="body-container">
-      <div class="blog-about">
-        <h1 class=" animate__animated animate__fadeInDown">My Thoughts</h1>
-        <p class=" animate__animated animate__fadeInUp">Public journal to explore my thoughts, writing about things I am passionate about.</p>
-      </div>
+    <div class="blog-about">
+      <h1 class="animate__animated animate__fadeInDown">My Thoughts</h1>
+      <p class="animate__animated animate__fadeInUp">
+        Public journal to explore my thoughts, writing about things I am
+        passionate about.
+      </p>
+    </div>
 
-      <div class="blog-container animate__animated animate__fadeInUp">
-        {blogPosts.map((blogPost) => (
-          <Post 
-          href={blogPost.href}
-          title={blogPost.title}
-          date={blogPost.date}
-          img={blogPost.img}
+    <div class="blog-container animate__animated animate__fadeInUp">
+      {
+        blogPosts.map((blogPost) => (
+          <Post
+            href={blogPost.href}
+            title={blogPost.title}
+            date={blogPost.date}
+            img={blogPost.img}
           />
-        ))}
-      </div>
+        ))
+      }
+    </div>
   </div>
 </Layout>
 
 <style>
-	.body-container {
+  .body-container {
     color: var(--body);
     display: flex;
     flex-flow: column;
@@ -35,42 +40,39 @@ import { blogPosts } from '../info/blogPosts';
     max-width: 650px;
     width: 100%;
   }
-  .blog-about{
+  .blog-about {
     margin-bottom: 20px;
   }
-  
+
   h1 {
     font-family: var(--header-font);
     font-size: 2.5rem;
     margin-bottom: 28px;
   }
 
-
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.75em;
   }
 
-  .blog-container{
+  .blog-container {
     margin-bottom: 24px;
   }
 
-  @media(max-width: 673px){
-    .blog-container{
+  @media (max-width: 673px) {
+    .blog-container {
       margin-left: 10px;
       margin-right: 10px;
-    } 
+    }
   }
 
-
-  
-  @media(max-width: 490px){
+  @media (max-width: 490px) {
     h1 {
-    font-size: 2rem;
-  }
+      font-size: 2rem;
+    }
 
-  p {
-    font-size: 1rem;
-  }
+    p {
+      font-size: 1rem;
+    }
   }
 </style>

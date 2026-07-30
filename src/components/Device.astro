@@ -1,13 +1,11 @@
 ---
 interface Props {
-	name: string;
-	description: string;
-	href: string;
-
+  name: string;
+  description: string;
+  href: string;
 }
 
-const { href, name, description} = Astro.props;
-
+const { href, name, description } = Astro.props;
 ---
 
 <div class="uses-container">
@@ -17,44 +15,39 @@ const { href, name, description} = Astro.props;
   </div>
 </div>
 
-
-
 <style>
-
-.uses-container{
+  .uses-container {
     display: flex;
     flex-direction: column;
     gap: 24px;
-  
-
   }
-  .uses-container p{
+  .uses-container p {
     color: var(--subtext);
   }
 
- .device-item{
-  margin: 0;
-  opacity: 0.5;
-  padding: 16px 0;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--highlight);
-  gap: 24px;
-  transition: opacity 0.25s ease-in-out, margin 0.25s ease-in-out;
- }
- 
- 
-  .device-item:hover{
+  .device-item {
+    margin: 0;
+    opacity: 0.5;
+    padding: 16px 0;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--highlight);
+    gap: 24px;
+    transition:
+      opacity 0.25s ease-in-out,
+      margin 0.25s ease-in-out;
+  }
+
+  .device-item:hover {
     margin-left: 10px;
     margin-right: 10px;
     opacity: 1;
   }
 
-  @media(max-width: 485px){
-    .device-item h2{
+  @media (max-width: 485px) {
+    .device-item h2 {
       font-size: 1.25rem;
     }
   }
-
 </style>

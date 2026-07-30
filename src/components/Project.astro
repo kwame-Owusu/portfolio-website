@@ -4,16 +4,12 @@ interface Props {
   projectDesc: string;
   projectLink: string;
 }
-const {projectName, projectDesc, projectLink } = Astro.props;
+const { projectName, projectDesc, projectLink } = Astro.props;
 ---
 
 <div class="project-grid-item">
   <div class="project-header">
-    <a
-      href={projectLink}
-      class="project-title"
-      target="_blank"
-    >
+    <a href={projectLink} class="project-title" target="_blank">
       <svg
         class="arrow"
         xmlns="http://www.w3.org/2000/svg"
@@ -29,21 +25,21 @@ const {projectName, projectDesc, projectLink } = Astro.props;
       {projectName}
     </a>
   </div>
-  <div class="project-desc">  
+  <div class="project-desc">
     {projectDesc}
   </div>
 </div>
 
 <style>
   .project-grid-item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 5px;
     border: 1px solid var(--grey-200);
     border-radius: 8px;
     transition: transform 0.3s ease;
   }
   .project-title {
-    letter-spacing: .50px;
+    letter-spacing: 0.5px;
     font-weight: bold;
     padding: 4px 8px;
     margin-left: -8px;
@@ -65,14 +61,14 @@ const {projectName, projectDesc, projectLink } = Astro.props;
     margin-right: 2px;
     vertical-align: middle;
   }
-  .project-desc{
+  .project-desc {
     text-decoration-style: wavy;
     text-decoration-color: white;
     margin-top: 8px;
     color: var(--subtext);
   }
-  @media(max-width: 499px){
-    .project-grid-item{
+  @media (max-width: 499px) {
+    .project-grid-item {
       font-size: 1rem;
     }
   }

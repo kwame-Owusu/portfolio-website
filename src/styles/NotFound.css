@@ -7,19 +7,19 @@
   align-items: center;
   height: 90vh;
 }
-hr{
+hr {
   color: white;
   margin-bottom: 15px;
   margin-top: 5px;
 }
-span{
+span {
   font-size: 30px;
 }
 
-p{
+p {
   margin-bottom: 30px;
 }
-.btn{
+.btn {
   text-decoration: none;
   color: white;
   border: 0.5px solid white;
@@ -28,14 +28,9 @@ p{
   margin-top: 50px;
   opacity: 0.6;
   transition: ease-in-out 0.3s;
-  
-
 }
 
-.btn:hover{
-  background-color: rgba(214, 239, 237, 0.7)
-  ;
+.btn:hover {
+  background-color: rgba(214, 239, 237, 0.7);
   opacity: 1;
-
-
 }
