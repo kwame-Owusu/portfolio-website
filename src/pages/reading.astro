@@ -19,7 +19,6 @@ import { books } from '../info/books';
       {
         books.map((book) => (
           <Book
-            bookImage={book.bookImage}
             bookAuthor={book.bookAuthor}
             bookName={book.bookName}
             bookStatus={book.bookStatus}
@@ -36,29 +35,14 @@ import { books } from '../info/books';
       display: flex;
       flex-flow: column;
       margin: 0 auto;
-      max-width: 1200px;
+      max-width: 650px;
       width: 100%;
-      padding: 0 20px;
-    }
-    .reading-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 24px;
-    }
-    @media (max-width: 768px) {
-      .reading-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-    }
-    @media (max-width: 480px) {
-      .reading-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
     .reading-about {
-      margin-bottom: 20px;
+      margin-bottom: 50px;
+    }
+    .reading-container {
+      margin-bottom: 30px;
     }
     h1 {
       font-family: var(--header-font);
