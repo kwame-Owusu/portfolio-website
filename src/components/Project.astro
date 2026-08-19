@@ -3,14 +3,18 @@ interface Props {
   projectName: string;
   projectDesc: string;
   projectLink: string;
+  isContributor?: boolean;
 }
-const { projectName, projectDesc, projectLink } = Astro.props;
+const { projectName, projectDesc, projectLink, isContributor } = Astro.props;
 ---
 
 <div class="project-card">
   <a href={projectLink} target="_blank">
     <div class="card-header">
-      <span class="project-name">{projectName}</span>
+      <span class="project-name">
+        {projectName}
+        {isContributor && <span class="badge">contributor</span>}
+      </span>
       <svg
         class="arrow"
         xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +65,19 @@ const { projectName, projectDesc, projectLink } = Astro.props;
   .project-name {
     color: var(--white);
     font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    color: var(--subtext);
+    background: var(--grey-700);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
   }
 
   .project-desc {

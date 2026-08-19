@@ -2,6 +2,7 @@ export interface Project {
   projectName: string;
   projectDesc: string;
   projectLink: string;
+  isContributor?: boolean;
 }
 
 export const projects: Project[] = [
@@ -14,6 +15,7 @@ export const projects: Project[] = [
     projectName: 'Geode',
     projectDesc: 'Remote sync, MCP, and an API for your Obsidian vault.',
     projectLink: 'https://github.com/8thpark/geode',
+    isContributor: true,
   },
   {
     projectName: 'Sintesi',
