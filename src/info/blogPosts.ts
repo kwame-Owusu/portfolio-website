@@ -7,6 +7,12 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    href: 'posts/strive-for-beauty',
+    title: 'Strive for Beauty',
+    date: 'October 10th, 2026',
+    img: '/blog/beauty.jpg',
+  },
+  {
     href: 'posts/the-existential-wickedness-of-man',
     title: 'The existential wickedness of man',
     date: 'May 7th, 2026',
