@@ -6,7 +6,7 @@ description: ""
 ---
 Why do modern homes look so ugly compared to the houses that were built generations ago? Our taste as humans in: architecture, software, cuisine, literature, and perhaps even fashion, seems to be degrading in some respects as time goes on. Why must it be so?
 
-Should we not, with the advancement of technology, acquire more taste? We have access to more information than we could ever need. Knowledge of history, art, stories, and cultures is available at the palm of our hands. So why is it that we must toil so much before beautiful things can come to fruition? Why can't our streets look beautiful? Why can't our software be reliable, elegant, and useful?
+Should we not, with the advancement of technology, acquire more taste? We have access to more information than we could ever need. Knowledge of history, art, stories, and cultures are available at the palm of our hands. So why is it that we must toil so much before beautiful things can come to fruition? Why can't our streets look beautiful? Why can't our software be reliable, elegant, and useful?
 
 My guess might be as good as anyone else's, but I think I might know why.
 
